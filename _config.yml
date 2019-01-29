@@ -1,0 +1,61 @@
+title:            Dave's Hacks
+tagline:          What it says on the tin
+description:      "A site containing some code, some reviews, and other ramblings"
+#Comment out url when working locally to resolve base urls correctly
+# url:              http://your-site.com
+
+# Owner/author information
+owner:
+  name:           David Roberts
+  avatar:         bio.jpg
+  bio:            "A PhD Computer Science guy working through life"
+  email:          d.a.t.robets@durham.ac.uk
+  # Social networking links are used in author-bio sidebar. Update and remove as you like.
+  twitter:        biomood  
+  github:         https://github.com/davidatroberts  
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:        
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about
+  - title: Articles
+    url: /articles
+  - title: CV 
+    url: /cv
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+pygments:    true
+markdown:    kramdown
+url: http://community.dur.ac.uk/d.a.t.roberts
+root: /d.a.t.roberts
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
