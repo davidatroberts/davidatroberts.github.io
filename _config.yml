@@ -9,7 +9,7 @@ owner:
   name:           David Roberts
   avatar:         bio.jpg
   bio:            "A PhD Computer Science guy working through life"
-  email:          d.a.t.robets@durham.ac.uk
+  email:          david.a.t.roberts@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:        biomood  
   github:         https://github.com/davidatroberts  
@@ -37,8 +37,8 @@ timezone:    America/New_York
 future:      true
 pygments:    true
 markdown:    kramdown
-url: http://community.dur.ac.uk/d.a.t.roberts
-root: /d.a.t.roberts
+url: https://davidatroberts.github.io
+root: /
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
