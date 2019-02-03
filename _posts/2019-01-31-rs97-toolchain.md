@@ -48,8 +48,8 @@ root@8ac34c1be2d5:/#
 ~~~
 
 ### The Toolchain
-The toolchain is installed in _/opt/rs97-toolchain_ and here <https://gist.github.com/davidatroberts/8ade17be770e08172ca49f6f5ba474ec> you can find a basic makefile that I've been using to compile my projects. 
-
+The toolchain is installed in _/opt/rs97-toolchain_ and
+[here](https://gist.github.com/davidatroberts/8ade17be770e08172ca49f6f5ba474ec) you can find a basic makefile that I've been using to compile my projects. 
 This assumes that the directory structure is:
 
 root
@@ -58,4 +58,4 @@ root
 : bin
 : obj
 
-The output file will be `output.dge`You can then copy this over onto the SD card in the RS97 and all being well you're program will run.
+The output file will be _output.dge_. You can then copy this over onto the SD card in the RS97 and all being well your program will run.
