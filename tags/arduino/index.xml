@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arduino on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/arduino/</link>
+    <description>Recent content in arduino on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Sat, 16 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Ghost, an Arduino and Go</title>
+      <link>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</link>
+      <pubDate>Sat, 16 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</guid>
+      <description>Going through Newcastle the other month, I out of habit went to visit Forbidden Planet, for comics but mainly for the toys and stuff.
+I came across what is possible one of the best lamps I have seen, I am of course talking about the LED Pacman ghost lamp. Now what makes it particularly interesting is that it comes with an infra-red (IR) remote control that can be used to change the colour as well as set a number of effects such as a fading and strobe effects.</description>
+    </item>
+    
+    <item>
+      <title>Arduino and PySerial</title>
+      <link>https://davidatroberts.github.io/post/arduino-and-python/</link>
+      <pubDate>Sun, 01 May 2011 16:15:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-and-python/</guid>
+      <description>In an earlier post I mentioned briefly about using pySerial to send data to and from the arduino using Python, in this post I&amp;rsquo;ll go through a bit more about how to set this up.
+First you&amp;rsquo;ll need pySerial, which can be downloaded from here. For windows users there is an installer package. For other OSs, download the source from the same link and in a terminal enter the pyserial-x.y directory and then for python3 users enter _python3 setup.</description>
+    </item>
+    
+    <item>
+      <title>Distance Sensors</title>
+      <link>https://davidatroberts.github.io/post/distance-sensors/</link>
+      <pubDate>Mon, 14 Feb 2011 20:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/distance-sensors/</guid>
+      <description>Since I&amp;rsquo;ve had an arduino I&amp;rsquo;ve been wanting to build a tracked robot, and slowly but surely I&amp;rsquo;ve been picking up sensors and motors to use.
+The latest sensor I&amp;rsquo;ve picked up is an infra red distance sensor namely the pololu GP2Y0D810Z0F Sharp sensor. This is a great little sensor that can detect items between 10cm and 2cm from itself, it has only 3 pins, power, ground and output. If an item is between 10cm and 2cm then the output is high, else it is low, perfect for sensing if a wall is approaching.</description>
+    </item>
+    
+  </channel>
+</rss>

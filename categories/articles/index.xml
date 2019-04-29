@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>articles on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/categories/articles/</link>
+    <description>Recent content in articles on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Thu, 31 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/categories/articles/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using docker to cross-compile for the RS97</title>
+      <link>https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/</guid>
+      <description>I&amp;rsquo;ve recently picked up an RS-97 handheld, it&amp;rsquo;s a neat little device that uses the old Revo K101 clone GBA shell. In the box it comes preinstalled with some emulators (and an absolute tonne of roms, being from China where copyright doesn&amp;rsquo;t seem to matter).
+Dingux was ported to the device and I&amp;rsquo;ve been using the UselessRS97 firmware. Although gameblabla, the developer, has recently stopped updating the firmware due to differences in hardware revisions - I&amp;rsquo;ve found it to be an excellent piece of software.</description>
+    </item>
+    
+    <item>
+      <title>OpenDingux 3D (slow edition)</title>
+      <link>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</guid>
+      <description>Looking back on these posts, I should probably try to update them a little more frequently. I think I might stick to relatively short posts, that way I might actually get some more out!
+Anyway, in the last post I described how I set up a development environment that was basically Xubuntu running in a virtual machine, and then SSHing into that from OS X. Well I&amp;rsquo;ve been putting that to use building a simple little software renderer for the Dingoo.</description>
+    </item>
+    
+    <item>
+      <title>OpenDingux Dev Environment for OS X (sort of)</title>
+      <link>https://davidatroberts.github.io/post/2014-10-11-opendingux/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2014-10-11-opendingux/</guid>
+      <description>A couple of years ago I picked up a Dingoo A320, it was awesome especially for commuting back and forth to Sky where I was working at the time. Anyway things change and inevitably it ended up in the back of a draw. Having moved house again, I found it, though there were a few scratches on the screen that were quickly taken care with good ol&amp;rsquo;Brasso. I decided that it was time for me to make something for it and learn SDL during the process.</description>
+    </item>
+    
+    <item>
+      <title>Chumby and Go</title>
+      <link>https://davidatroberts.github.io/post/2013-11-17-chumby-go/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2013-11-17-chumby-go/</guid>
+      <description>A number of years ago I purchased a Chumby One, basically a fancy alarm clock running linux. I&amp;rsquo;ve played with a few different languages for it but haven&amp;rsquo;t really done much with it lately. I&amp;rsquo;ve also been using a bit of Go recently and thought it might be fun to get Go running on the Chumby One, this has actually proven to be remarkably easy thanks to Go already coming with a number of compilers for different architectures.</description>
+    </item>
+    
+    <item>
+      <title>A Ghost, an Arduino and Go</title>
+      <link>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</link>
+      <pubDate>Sat, 16 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</guid>
+      <description>Going through Newcastle the other month, I out of habit went to visit Forbidden Planet, for comics but mainly for the toys and stuff.
+I came across what is possible one of the best lamps I have seen, I am of course talking about the LED Pacman ghost lamp. Now what makes it particularly interesting is that it comes with an infra-red (IR) remote control that can be used to change the colour as well as set a number of effects such as a fading and strobe effects.</description>
+    </item>
+    
+  </channel>
+</rss>

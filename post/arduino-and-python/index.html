@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Arduino and PySerial"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="Arduino and PySerial &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/arduino-and-python/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2011-05-01T16:15:00Z" />
+
+    
+    <meta property="article:tag" content="arduino" />
+    
+    <meta property="article:tag" content="pyserial" />
+    
+    <meta property="article:tag" content="python" />
+    
+    
+
+    <title>Arduino and PySerial &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="In an earlier post I mentioned briefly about using pySerial to send data to and from the arduino using Python, in this post I&amp;rsquo;ll go through a bit more abo" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/arduino-and-python/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": Arduino and PySerial,
+    "name": Arduino and PySerial,
+    "wordCount": 604,
+    "timeRequired": "PT3M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/arduino-and-python/,
+    "datePublished": 2011-05-01T16:15Z,
+    "dateModified": 2011-05-01T16:15Z,
+    
+    "keywords": arduino, pyserial, python,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/arduino-and-python/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Arduino and PySerial</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2011-05-01T16:15:00Z">
+            May 1, 2011
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/arduino/">#arduino</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/pyserial/">#pyserial</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/python/">#python</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>In an earlier post I mentioned briefly about using pySerial to send data to and from the arduino using Python, in this post I&rsquo;ll go through a bit more about how to set this up.</p>
+
+<p>First you&rsquo;ll need pySerial, which can be downloaded from <a href="http://pypi.python.org/pypi/pyserial">here</a>. For windows users there is an installer package. For other OSs, download the source from the same link and in a terminal enter the <em>pyserial-x.y</em> directory and then for python3 users enter _python3 setup.py install _else enter <em>python setup.py install.</em></p>
+
+<p><strong>Usage</strong></p>
+
+<p>I&rsquo;ll walk you through an example of how to get a python script sending and receiving data from an arduino. The main idea is that we&rsquo;ll open up a connection to the arduino, send a message and then have the arduino send back the message to the python script.</p>
+
+<p><strong>Python</strong></p>
+
+<script src="https://gist.github.com/biomood/949981.js"></script>
+
+<p>First we import the <em>pySerial</em> library and then as we&rsquo;ll need to set the script to sleep later on we&rsquo;ll also need to import _time. _</p>
+
+<p>In line 9 we open a connection to the arduino that in my case was connected to _&lsquo;/dev/tty.usbserial-A600agDn&rsquo; _but may be different for you. The easiest way to find out what port your arduino is using is whilst your arduino is connected to the PC open the arduino IDE and then Tools-&gt;Serial Port. The port your device is connected to will have a tick next to it. The second argument, <em>9600</em>, refers to the speed of the connection, I&rsquo;m using an arduino duemilanove so it may be different if you&rsquo;re using an different board.</p>
+
+<p>Line 12 is very important, when a connection is made via serial to the arduino, the arduino board will reset itself. I didn&rsquo;t know this at first and it caused me a whole heap of pain later on with the script being unable to read data the arduino had sent. So, we set the script to sleep for 2 seconds which is just enough time for the arduino to reset itself.</p>
+
+<p>On line 23 we send a single character to the arduino, this could be anything but I&rsquo;ve just used &lsquo;3&rsquo; for now. If this fails than an exception will be thrown, an error message displayed and the connection will be closed gracefully.</p>
+
+<p>On line 32 we set the script to sleep for a second, this gives the arduino enough time to reply back to the message it was sent. In line 37 we then just read a single byte from the serial and output the message and afterwards close the connection.</p>
+
+<p><strong>Arduino Code</strong></p>
+
+<script src="https://gist.github.com/biomood/950467.js"></script>
+
+<p>So, now for the arduino code, this quite a simple sketch and I&rsquo;ll go through the main bits.</p>
+
+<p>In line 1 we just define a char variable that will hold the received message. I&rsquo;ve just set this to &lsquo;0&rsquo; so it is easy to compare to when we have received data. In the <em>setup</em> function we begin the serial connection with the correct speed.</p>
+
+<p>In the _loop _we use a while loop with the condition <em>Serial.available() &gt; 0</em>, if there is data available this will be greater than 0 and the body of the while loop will execute. In the body we just set <em>msg</em> to be the data available.</p>
+
+<p>In line 14 we do a quick check to see whether <em>msg</em> is not the defined value, i.e. it&rsquo;s been given some value from reading serial and then we print the value back to the serial connection and set <em>msg</em> back to &lsquo;0&rsquo;.</p>
+
+<p>And that&rsquo;s how to send and receive data to an ardunio. If you have any issues with the code then just post a comment and I&rsquo;ll see if I can help</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">biomood</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Arduino%20and%20PySerial&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2farduino-and-python%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2farduino-and-python%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2farduino-and-python%2f&amp;description=Arduino%20and%20PySerial"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2farduino-and-python%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/arduino-and-python\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/arduino-and-python\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/">
+          <section class="post">
+              <h2>nLove, Dingoo and fonts</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/arduino-thermometer/">
+          <section class="post">
+              <h2>Arduino Thermometer</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/go/</link>
+    <description>Recent content in Go on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Sun, 17 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chumby and Go</title>
+      <link>https://davidatroberts.github.io/post/2013-11-17-chumby-go/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2013-11-17-chumby-go/</guid>
+      <description>A number of years ago I purchased a Chumby One, basically a fancy alarm clock running linux. I&amp;rsquo;ve played with a few different languages for it but haven&amp;rsquo;t really done much with it lately. I&amp;rsquo;ve also been using a bit of Go recently and thought it might be fun to get Go running on the Chumby One, this has actually proven to be remarkably easy thanks to Go already coming with a number of compilers for different architectures.</description>
+    </item>
+    
+    <item>
+      <title>A Ghost, an Arduino and Go</title>
+      <link>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</link>
+      <pubDate>Sat, 16 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</guid>
+      <description>Going through Newcastle the other month, I out of habit went to visit Forbidden Planet, for comics but mainly for the toys and stuff.
+I came across what is possible one of the best lamps I have seen, I am of course talking about the LED Pacman ghost lamp. Now what makes it particularly interesting is that it comes with an infra-red (IR) remote control that can be used to change the colour as well as set a number of effects such as a fading and strobe effects.</description>
+    </item>
+    
+  </channel>
+</rss>

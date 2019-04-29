@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Meggy Jr, Game Of Life"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="Meggy Jr, Game Of Life &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/meggy-jr-game-of-life/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2011-09-18T21:16:00Z" />
+
+    
+    
+
+    <title>Meggy Jr, Game Of Life &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="After my last post with the Meggy Jr displaying the weather, I wanted to write a standalone app for the Meggy Jr that doesn&amp;rsquo;t connect to a PC and does a l" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/meggy-jr-game-of-life/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": Meggy Jr, Game Of Life,
+    "name": Meggy Jr, Game Of Life,
+    "wordCount": 425,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/meggy-jr-game-of-life/,
+    "datePublished": 2011-09-18T21:16Z,
+    "dateModified": 2011-09-18T21:16Z,
+    
+    
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/meggy-jr-game-of-life/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Meggy Jr, Game Of Life</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2011-09-18T21:16:00Z">
+            Sep 18, 2011
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>After my last post with the Meggy Jr displaying the weather, I wanted to write a standalone app for the Meggy Jr that doesn&rsquo;t connect to a PC and does a little more than just display data that&rsquo;s being sent to it.</p>
+
+<p>So, I decided to implement a version of Conway&rsquo;s Game of Life on the Meggy, there&rsquo;s just enough pixels to make it work well and I think it looks pretty cool. If you haven&rsquo;t heard of the Game of Life, it&rsquo;s not a cheesy gameshow, it&rsquo;s a cellular automaton where we have a grid of cells and each cell is either &lsquo;alive&rsquo; or &lsquo;dead&rsquo;.</p>
+
+<p>Each iteration of the cells follows a set of simple rules:</p>
+
+<ul>
+<li>Any live cell with fewer than two live neighbours dies</li>
+<li>Any live cell with two or three live neighbours lives on to the next iteration</li>
+<li>Any live cell with more than three live neighbours dies</li>
+<li>Any dead cell with exactly three live neighbours becomes a live cell</li>
+</ul>
+
+<p>By setting an initial configuration of cells that are alive we can see how patterns evolve, there&rsquo;s huge number of patterns that can be created, some oscilate between different states, some are stable and some &lsquo;die&rsquo; after a certain number of iterations. Check out <a href="http://www.conwaylife.com/">http://www.conwaylife.com/</a> if you want to find out more about the different types of patterns that can be created such as &lsquo;ships&rsquo;, &lsquo;guns&rsquo; and even self replecating machines.</p>
+
+<p><strong>On the Meggy Jr</strong></p>
+
+<p>I&rsquo;ve implemented a simple version of game of life and to get around the limitation of having only an 8by8 grid to play with I&rsquo;ve wrapped the edges so that if a pattern goes off the screen it wraps to the other side. I&rsquo;ve also put an &lsquo;edit&rsquo; mode in the game so that when it starts up there&rsquo;s a red cursor that can be moved with the directional pads, when the B button is pressed it sets that cell to alive. When A is pressed it continues the game with the cell pattern that has been set. Pressing A again during the game will return it to the &lsquo;edit&rsquo; mode. (Or at least it should most of the time, I really need to put in some debouncing code). The auxilary LEDs at the top display in binary the number of iterations that have passed, this will reset after 255.</p>
+
+<p>You can see it in action below, I create a pattern called a toad that oscilates between two states.</p>
+
+<video width="500" height="282" controls>
+    <source src="https://davidatroberts.github.io/images/meggy.mp4">
+    Unfortunately your browser does not support HTML5 video
+</video>
+  
+
+<p>As always the code is available <a href="https://gist.github.com/1225560">here</a>, have fun!</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">biomood</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Meggy%20Jr%2c%20Game%20Of%20Life&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fmeggy-jr-game-of-life%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fmeggy-jr-game-of-life%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fmeggy-jr-game-of-life%2f&amp;description=Meggy%20Jr%2c%20Game%20Of%20Life"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fmeggy-jr-game-of-life%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/meggy-jr-game-of-life\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/meggy-jr-game-of-life\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://davidatroberts.github.io/post/love-paged-list/">
+          <section class="post">
+              <h2>LOVE paged list</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/">
+          <section class="post">
+              <h2>Meggy Jr, weather and temperature</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

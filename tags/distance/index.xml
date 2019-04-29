@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>distance on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/distance/</link>
+    <description>Recent content in distance on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Mon, 14 Feb 2011 20:46:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/distance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Distance Sensors</title>
+      <link>https://davidatroberts.github.io/post/distance-sensors/</link>
+      <pubDate>Mon, 14 Feb 2011 20:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/distance-sensors/</guid>
+      <description>Since I&amp;rsquo;ve had an arduino I&amp;rsquo;ve been wanting to build a tracked robot, and slowly but surely I&amp;rsquo;ve been picking up sensors and motors to use.
+The latest sensor I&amp;rsquo;ve picked up is an infra red distance sensor namely the pololu GP2Y0D810Z0F Sharp sensor. This is a great little sensor that can detect items between 10cm and 2cm from itself, it has only 3 pins, power, ground and output. If an item is between 10cm and 2cm then the output is high, else it is low, perfect for sensing if a wall is approaching.</description>
+    </item>
+    
+  </channel>
+</rss>

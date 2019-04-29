@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://davidatroberts.github.io/categories/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/docker/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/rs97/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/uselessrs97/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/categories/articles/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/cross-compile/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/3d/</loc>
+    <lastmod>2015-07-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/dingoo/</loc>
+    <lastmod>2015-07-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/opendingux/</loc>
+    <lastmod>2015-07-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</loc>
+    <lastmod>2015-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/2014-10-11-opendingux/</loc>
+    <lastmod>2014-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/2013-11-17-chumby-go/</loc>
+    <lastmod>2013-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/go/</loc>
+    <lastmod>2013-11-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/chumby/</loc>
+    <lastmod>2013-11-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</loc>
+    <lastmod>2013-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/arduino/</loc>
+    <lastmod>2013-09-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/big-trak-jr-and-raspberry-pi-part-1/</loc>
+    <lastmod>2012-07-15T21:09:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/bigtrak/</loc>
+    <lastmod>2012-07-15T21:09:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/raspberrypi/</loc>
+    <lastmod>2012-07-15T21:09:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/coffeescript-playbook-and-the-game-thats-almo/</loc>
+    <lastmod>2012-05-30T20:20:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/coffeescript/</loc>
+    <lastmod>2012-05-30T20:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/html5/</loc>
+    <lastmod>2012-05-30T20:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/playbook/</loc>
+    <lastmod>2012-05-30T20:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/perlin-noise/</loc>
+    <lastmod>2012-05-22T19:42:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/chumby-lua-and-segmentation-fault/</loc>
+    <lastmod>2012-03-18T17:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/love-paged-list/</loc>
+    <lastmod>2012-03-14T21:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/meggy-jr-game-of-life/</loc>
+    <lastmod>2011-09-18T21:16:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</loc>
+    <lastmod>2011-09-12T19:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/</loc>
+    <lastmod>2011-07-07T18:09:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/launchpad-msp430/</loc>
+    <lastmod>2011-07-04T16:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/c64-assembly/</loc>
+    <lastmod>2011-06-25T16:50:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/</loc>
+    <lastmod>2011-06-10T19:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/arduino-and-python/</loc>
+    <lastmod>2011-05-01T16:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/pyserial/</loc>
+    <lastmod>2011-05-01T16:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/python/</loc>
+    <lastmod>2011-05-01T16:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/arduino-thermometer/</loc>
+    <lastmod>2011-04-24T21:25:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/chumby-ftp/</loc>
+    <lastmod>2011-04-17T20:04:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/ftp/</loc>
+    <lastmod>2011-04-17T20:04:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/43870836/</loc>
+    <lastmod>2011-02-22T21:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/distance-sensors/</loc>
+    <lastmod>2011-02-14T20:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/distance/</loc>
+    <lastmod>2011-02-14T20:46:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/categories/arduino/</loc>
+    <lastmod>2010-07-24T21:30:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/arduino-and-shifts/</loc>
+    <lastmod>2010-07-24T21:30:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/about/</loc>
+  </url>
+  
+</urlset>

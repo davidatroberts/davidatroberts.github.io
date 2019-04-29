@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="C64 Assembly Tutorial 1: Hello World"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="C64 Assembly Tutorial 1: Hello World &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/c64-assembly/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2011-06-25T16:50:00Z" />
+
+    
+    
+
+    <title>C64 Assembly Tutorial 1: Hello World &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="Yes, that&amp;rsquo;s right I&amp;rsquo;m on about assembly programming for the Commodore 64, a computer that&amp;rsquo;s nearly 30 years old. You may be wondering why I wo" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/c64-assembly/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": C64 Assembly Tutorial 1: Hello World,
+    "name": C64 Assembly Tutorial 1: Hello World,
+    "wordCount": 1108,
+    "timeRequired": "PT6M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/c64-assembly/,
+    "datePublished": 2011-06-25T16:50Z,
+    "dateModified": 2011-06-25T16:50Z,
+    
+    
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/c64-assembly/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">C64 Assembly Tutorial 1: Hello World</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2011-06-25T16:50:00Z">
+            Jun 25, 2011
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Yes, that&rsquo;s right I&rsquo;m on about assembly programming for the Commodore 64, a computer that&rsquo;s nearly 30 years old. You may be wondering why I would want to learn how to program for such a machine, well the first reason is that I want to learn assembly and there are many C64 assembly books around. The second reason is that I want to see what I can do with it and more about the lower level hardware and how to control it.</p>
+
+<p><strong>Getting Started</strong></p>
+
+<p>First things first, unless you have an actual C64, you&rsquo;ll need an emulator to run the programs you&rsquo;re creating. I&rsquo;m using VICE, but there are plenty of different emulators around. Next you&rsquo;ll need an assembler, I&rsquo;m using dasm that supports the 6502 processor plus several others. It is available from the project page <a href="http://dasm-dillon.sourceforge.net/">http://dasm-dillon.sourceforge.net/</a></p>
+
+<p>If you&rsquo;re using a mac, after you&rsquo;ve installed dasm, you can create an alias to dasm by entering &lsquo;_open -a TextEdit -/.bash<em>profile</em>&rsquo; in the terminal and then adding this line &lsquo;<em>alias dasm=&ldquo;/path/dasm&rdquo;</em>&rsquo; where path is the path to your install of dasm. This means that you&rsquo;ll only have to enter dasm rather than the full file path when you want to assemble your programs.</p>
+
+<p><strong>Hello World</strong></p>
+
+<p>So now we&rsquo;ve got the emulator and the assembler we can actually get on with some code, below is code to display the text &lsquo;Hello World&rsquo; on the screen. This may seem simple but it&rsquo;s using loops, labels, branches and sub-routines, I&rsquo;ll run through the code after.</p>
+
+<p>Ok so first the line &lsquo;_processor 6502&rsquo; _just tells dasm what processor we want to compile for the 6502 processor. (The C64 used a 6510 processor, however this is just a modified version of the 6502). The next line is where we want to store the program in memory as hexadecimal, I&rsquo;ve placed it an used area of memory that has 4096 bytes free. If you change this be careful where you put it as a large amount of the memory is already being used for specifc purposes. There is a memory map for the C64 available at <a href="http://sta.c64.org/cbm64mem.html">http://sta.c64.org/cbm64mem.html</a> that gives details of what each section of memory does.</p>
+
+<p>The C64 comes with a number of very useful sub routines that can be called from within your assembly program and in lines 9 and 10 we&rsquo;re setting up some labels to two of these sub routines. The first labeled &lsquo;<em>CLEAR</em>&rsquo; clears the screen goes to the hexadecimal address (noted by the $) E544, and the second &lsquo;<em>CHROUT</em>&rsquo; pointing to the address FFD2, outputs a character stored in the A registor to the next position in the screen.</p>
+
+<p>The next lines are where the program gets started, first we call the _CLEAR _subroutine by using <em>JSR</em>, this stands for &lsquo;jump to subroutine&rsquo; and will execute the routine at the given address and return. Next we load the X registor with the decimal value 0 (denoted by the #) .</p>
+
+<p>Before we move onto the next section of code I will explain how we can store the text &ldquo;Hello World&rdquo; in assembly to output. There are several ways to do it, we could for example put the code for the character &lsquo;H&rsquo; in the A registor and then output using <em>CHROUT</em>, and then put the character code for &lsquo;E&rsquo; in the A registor and use <em>CHROUT</em> to output this and so on&hellip;Indeed this is exactly how the code <a href="https://gist.github.com/990424">here</a> works.</p>
+
+<p>This may be fine for small amounts of text, but will soon get tiring after a while. Luckily there&rsquo;s a pseudo-opcode available called _.BYTE _that allows us to define a string with each character in the string taking up a single byte. By giving it a label and using a registor as an index we can loop through the message displaying each character to the screen. The label &lsquo;<em>MSG</em>&rsquo; actually points to the address of the first character in the string, in this case &lsquo;H&rsquo;. You may be wondering why we have the &lsquo;#&rsquo; character at the end of the string when we don&rsquo;t want to display this, well we&rsquo;ll be using this as a termination character so we know when to stop looping through the string.</p>
+
+<p>Now back to the code that will loop through the string and display it on line 15. I have given the first instruction a label &lsquo;<em>READ</em>&rsquo; this is just so we know where to jump to for the next iteration of the loop. The actual instruction <em>&lsquo;LDA MSG,X</em>&rsquo; loads the A registor with the value that is given by address denoted with the label MSG plus an offset value in the X registor. In the first iteration of the loop we have loaded X with 0, and so A will be the value at the address of MSG+0, in this case &lsquo;H&rsquo;.</p>
+
+<p>In lines 17 and 18 we first use &lsquo;<em>CMP #35</em>&rsquo; to compare the value stored in the A registor against the decimal character code for the &lsquo;<em>#</em>&rsquo; character. If it&rsquo;s equal we then use &lsquo;<em>BEQ END</em>&rsquo; to branch to the END label where the routine ends. If it&rsquo;s not equal then we haven&rsquo;t reached the end of the message and we display the current character in the A registor using <em>&lsquo;JSR CHROUT</em>&rsquo;. We then increase the index in X so that the next iteration of the loop will move to the next character in the message.  Finally we do an unconditional jump back to the &lsquo;<em>READ</em>&rsquo; label to continue the loop and display the next character.</p>
+
+<p><strong>Executing the code</strong></p>
+
+<p>To run the code you&rsquo;ll need to assemble it using dasm, if you have set an alias to it then the command will look like this:</p>
+
+<p>dasm HelloWorld.asm -oHelloWorld.prg</p>
+
+<p>Next, open HelloWorld.prg in VICE, or whatever emulator you&rsquo;re using and then type in &lsquo;<em>SYS 49152</em>&rsquo;. (49152 or C000 in hex is where we&rsquo;ve placed the code in line 6) . If all goes well you should see the below image with &lsquo;HELLO WORLD&rsquo; displayed on the screen.</p>
+
+<p><img src="https://davidatroberts.github.io/images/c64_helloworld.jpg" alt="Helloworld" />
+<strong>After</strong></p>
+
+<p>It might not do much, but we&rsquo;ve used quite a few features of assembly in our code, including jump, increment, branches, comparisons and I hope it&rsquo;s given a bit of a help for anyone who wants to start learning assembly for the C64. In the second tutorial I&rsquo;ll show how to do sprites and explain how to retrieve keyboard input to move the sprite.</p>
+
+<p>For a fantastic book to learn how to program for the C64 I&rsquo;d advise &ldquo;Assembly Language for Kids Commodore 64&rdquo;, Sanders. This goes from the very start all the way to how to produce sound and is the basis for these tutorials, as I&rsquo;m learning at the same time!</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">biomood</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=C64%20Assembly%20Tutorial%201%3a%20Hello%20World&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fc64-assembly%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fc64-assembly%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fc64-assembly%2f&amp;description=C64%20Assembly%20Tutorial%201%3a%20Hello%20World"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fc64-assembly%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/c64-assembly\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/c64-assembly\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://davidatroberts.github.io/post/launchpad-msp430/">
+          <section class="post">
+              <h2>Launchpad MSP430 - binary display</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/">
+          <section class="post">
+              <h2>nLove, Dingoo and fonts</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

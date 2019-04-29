@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shift on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/shift/</link>
+    <description>Recent content in shift on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Tue, 11 Jan 2011 21:48:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/shift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arduino Gmail Checker</title>
+      <link>https://davidatroberts.github.io/post/arduino-gmail-checker/</link>
+      <pubDate>Tue, 11 Jan 2011 21:48:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-gmail-checker/</guid>
+      <description>I&amp;rsquo;ve started picking up a few more bits and pieces and came across some 7-segment displays, after thinking of a few ideas for these I decided on using it to display the number of unread emails I have on my gmail account.
+Intro
+The displays I picked up are anode displays, meaning they take a positive voltage and to light one of the segments you have to send a LOW (ground) signal to.</description>
+    </item>
+    
+  </channel>
+</rss>

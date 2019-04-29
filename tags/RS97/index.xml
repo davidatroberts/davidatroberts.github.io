@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RS97 on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/rs97/</link>
+    <description>Recent content in RS97 on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Thu, 31 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/rs97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using docker to cross-compile for the RS97</title>
+      <link>https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/</guid>
+      <description>I&amp;rsquo;ve recently picked up an RS-97 handheld, it&amp;rsquo;s a neat little device that uses the old Revo K101 clone GBA shell. In the box it comes preinstalled with some emulators (and an absolute tonne of roms, being from China where copyright doesn&amp;rsquo;t seem to matter).
+Dingux was ported to the device and I&amp;rsquo;ve been using the UselessRS97 firmware. Although gameblabla, the developer, has recently stopped updating the firmware due to differences in hardware revisions - I&amp;rsquo;ve found it to be an excellent piece of software.</description>
+    </item>
+    
+  </channel>
+</rss>

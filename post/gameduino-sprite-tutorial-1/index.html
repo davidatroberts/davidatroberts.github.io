@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Gameduino: Sprite Tutorial 1"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="Gameduino: Sprite Tutorial 1 &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2011-07-07T18:09:00Z" />
+
+    
+    
+
+    <title>Gameduino: Sprite Tutorial 1 &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="A few months ago on KickStarter I sponsored a project called the Gameduino, an add on shield for the Arduino, advertised as a game adapter for the Arduino. This" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": Gameduino: Sprite Tutorial 1,
+    "name": Gameduino: Sprite Tutorial 1,
+    "wordCount": 716,
+    "timeRequired": "PT4M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/,
+    "datePublished": 2011-07-07T18:09Z,
+    "dateModified": 2011-07-07T18:09Z,
+    
+    
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Gameduino: Sprite Tutorial 1</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2011-07-07T18:09:00Z">
+            Jul 7, 2011
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>A few months ago on KickStarter I sponsored a project called the Gameduino, an add on shield for the Arduino, advertised as a game adapter for the Arduino. This is an awesome little device that has 32Kb of RAM, brings support for VGA output, stereo sound and has a co-processor that runs forth. See the official site for more information: <a href="http://excamera.com/sphinx/gameduino/">http://excamera.com/sphinx/gameduino/</a>. About two weeks ago mine arrived and since then in some of my spare time I&rsquo;ve been working out how to output sprites and generally figuring out how it works. In this post I&rsquo;ll explain a bit about how to display sprites and animate them.</p>
+
+<p>Before you start I&rsquo;d suggest having a look at the reference poster <a href="http://excamera.com/files/gameduino/synth/doc/gen/poster.pdf">here</a>. Also, there&rsquo;s an excellent reference book from derek available on the gameduino answer <a href="http://answers.gameduino.com/question/15/gameduino-reference-manual-v0">page</a>. There&rsquo;s a lot of very useful information regarding the memory layout and how the coprocessor works.</p>
+
+<p><strong>The Basics</strong></p>
+
+<p>The Gameduino is capable of displaying 256 sprites with each sprite being a 16 by 16 pixel image with a byte for each pixel. Each sprite has a 32bit control word that defines the sprite number, xy coordinates, rotation, collision class, and palette. The palette for a sprite defines what colour each pixel will be displayed as, there are two 4 colour palettes, two 16 colour palettes and four 256 palettes.</p>
+
+<p><strong>Getting Started</strong></p>
+
+<p>So, first things first, to display a sprite we need an image. We can write it manually in hexadecimal however there&rsquo;s a gameduino python package available <a href="http://excamera.com/sphinx/gameduino/python.html#gameduino-prep-for-graphics-and-sound-preparation">here</a> that has a number of methods for converting images and sound for a format suitable on the Gameduino. After you&rsquo;ve installed the package you can run this quick <a href="https://gist.github.com/1041172">script</a> I&rsquo;ve put together  To use the script create your 16x16 image and save it as a PNG file, then in the commandline/ terminal enter:</p>
+
+<p>_python imageToH.py image_path.png header_name _</p>
+
+<p>If you are using more than 4 colours (including transparency) then you&rsquo;ll want to change the number of colours in this line <em>&lsquo;sprite = prep.palettize(im, 4)&rsquo;</em> to be 16 or 256 depending on how many colours you&rsquo;re using. You&rsquo;ll also want to change this line_&lsquo;ir.addsprites(sprite<em>name, (16, 16), sprite, prep.PALETTE4A)&rsquo;</em> to use _PALETTE16A/B _or <em>PALETTE256A/B/C/D</em>. This script will create a header file, which we&rsquo;ll then include in our program.</p>
+
+<p><strong>Program steps</strong></p>
+
+<p>Below are the list of actions that are needed to display a single sprite.</p>
+
+<ol>
+<li>Include the SPI and gameduino header files</li>
+<li>Include the image header file created previously</li>
+<li>Begin the gameduino library</li>
+<li>Set the background colour</li>
+<li>Set up the palette with the colours we want to use</li>
+<li>Copy the sprite image into RAM</li>
+<li>Set the sprite control word and display</li>
+</ol>
+
+<p>This code to display a single sprite can be found <a href="https://gist.github.com/1049920">here</a></p>
+
+<p>If you&rsquo;ve been following so far then upload the code to your arduino and connect the gameduino to a monitor and you should see a little alien in the middle of the screen.</p>
+
+<p><strong>Animation</strong></p>
+
+<p>There are a few different ways that we can animate an image on the Gameduino.</p>
+
+<p>The first method is perhaps the most obvious, we can switch the image that the sprite control word will display. If for example we have a sprite that is of a man with his arms out and then another sprite of a man with his arms up, and we flick between these sprites quickly enough it will look like the man is waving his arms.</p>
+
+<p>I have modified the code to display a single sprite so that it loads two images into RAM and then switches between these after about 0.5 seconds. The code can be found <a href="https://gist.github.com/1054158">here</a>. It should display an alien jiggling around.</p>
+
+<p>The second method is slightly different as we only need to use a single sprite. Say we have a sprite with a pair of eyes that are looking leftwards by changing the 3 bits in the sprite control word that control the rotation we can change the eyes so that they are looking towards the right.</p>
+
+<p>A thrid way of animation does not involve switching or flipping the sprite, rather we change the colours that are displayed for the sprite. We can do this by changing the palette that is used to display the sprite.</p>
+
+<p>You can find the three ways of animating sprites on the github project I&rsquo;ve set up: <a href="https://github.com/biomood/SpriteTest-Gameduino">https://github.com/biomood/SpriteTest-Gameduino</a></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">biomood</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Gameduino%3a%20Sprite%20Tutorial%201&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fgameduino-sprite-tutorial-1%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fgameduino-sprite-tutorial-1%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fgameduino-sprite-tutorial-1%2f&amp;description=Gameduino%3a%20Sprite%20Tutorial%201"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2fgameduino-sprite-tutorial-1%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/gameduino-sprite-tutorial-1\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/gameduino-sprite-tutorial-1\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/">
+          <section class="post">
+              <h2>Meggy Jr, weather and temperature</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/launchpad-msp430/">
+          <section class="post">
+              <h2>Launchpad MSP430 - binary display</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

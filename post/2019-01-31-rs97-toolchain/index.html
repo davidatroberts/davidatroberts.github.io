@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Using docker to cross-compile for the RS97"/>
+<meta name="twitter:description" content="How to set up and use an RS97 toolchain on docker"/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="Using docker to cross-compile for the RS97 &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="How to set up and use an RS97 toolchain on docker" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-01-31T00:00:00Z" />
+
+    
+    <meta property="article:tag" content="RS97" />
+    
+    <meta property="article:tag" content="UselessRS97" />
+    
+    <meta property="article:tag" content="Docker" />
+    
+    <meta property="article:tag" content="cross-compile" />
+    
+    
+
+    <title>Using docker to cross-compile for the RS97 &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="How to set up and use an RS97 toolchain on docker" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": Using docker to cross-compile for the RS97,
+    "name": Using docker to cross-compile for the RS97,
+    "wordCount": 390,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/,
+    "datePublished": 2019-01-31T00:00Z,
+    "dateModified": 2019-01-31T00:00Z,
+    
+    "keywords": RS97, UselessRS97, Docker, cross-compile,
+    "description": How to set up and use an RS97 toolchain on docker,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Using docker to cross-compile for the RS97</h1>
+        <small>How to set up and use an RS97 toolchain on docker</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2019-01-31T00:00:00Z">
+            Jan 31, 2019
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/rs97/">#RS97</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/uselessrs97/">#UselessRS97</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/docker/">#Docker</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/cross-compile/">#cross-compile</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>I&rsquo;ve recently picked up an RS-97 handheld, it&rsquo;s a neat little device that uses the old Revo K101 clone GBA shell. In the box it comes preinstalled with some emulators (and an absolute tonne of roms, being from China where copyright doesn&rsquo;t seem to matter).</p>
+
+<p>Dingux was ported to the device and I&rsquo;ve been using the UselessRS97 firmware. Although gameblabla, the developer, has recently stopped updating the firmware due to differences in hardware revisions - I&rsquo;ve found it to be an excellent piece of software.</p>
+
+<p>The toolchain for the device found at <a href="https://github.com/gameblabla/buildroot-rs97">https://github.com/gameblabla/buildroot-rs97</a> requires debian, however me using Mac OS and not really being keen to dual boot linux on my macbook air I decided to use Docker.</p>
+
+<p>Using docker, a light-weight version of debian can be run that has only the packages required to get the toolchain working. It also means I can develop on OSX without switching over to a virtual machine, the same method can also be used to cross develop on Windows and Linux as well.</p>
+
+<h3 id="docker">Docker</h3>
+
+<p>We&rsquo;ll be using Docker to host the debian image that will contain the toolchain</p>
+
+<ul>
+<li>Install Docker
+
+<ul>
+<li>For Windows use <a href="https://docs.docker.com/docker-for-windows/install/">https://docs.docker.com/docker-for-windows/install/</a></li>
+<li>For Mac OS use <a href="https://docs.docker.com/docker-for-mac/install/">https://docs.docker.com/docker-for-mac/install/</a></li>
+<li>For Linux <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository">https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository</a></li>
+</ul></li>
+</ul>
+
+<p>I&rsquo;ve already created the docker image, so you can just download the image and get started by:</p>
+
+<pre><code class="language-bash">docker pull biomood/rs97:latest
+</code></pre>
+
+<p>Next, you&rsquo;ll need to run the image using the command below. This will start running debian and put you straight into the shell.</p>
+
+<pre><code class="language-bash">docker run --rm -ti -v [path]:/code biomood/rs97:latest
+</code></pre>
+
+<dl>
+<dt>where</dt>
+<dd><em>run</em> - tell Docker to run the image</dd>
+<dd><em>&ndash;rm</em> - removes the container&rsquo;s file system when the image is finished</dd>
+<dd><em>-ti</em> - allocates a virtual terminal session and keeps STDIN open</dd>
+<dd><em>-v</em> - mounts a volume, the <em>[path]</em> option should be some location on your host machine, this will then get mapped to the <em>/code</em> directory in the docker image</dd>
+</dl>
+
+<p>If all goes well debian should&rsquo;ve started and you&rsquo;ll see something like this in your terminal:</p>
+
+<pre><code class="language-bash">root@8ac34c1be2d5:/#
+</code></pre>
+
+<h3 id="the-toolchain">The Toolchain</h3>
+
+<p>The toolchain is installed in <em>/opt/rs97-toolchain</em> and
+<a href="https://gist.github.com/davidatroberts/8ade17be770e08172ca49f6f5ba474ec">here</a> you can find a basic makefile that I&rsquo;ve been using to compile my projects.
+This assumes that the directory structure is:</p>
+
+<dl>
+<dt>root</dt>
+<dd>src</dd>
+<dd>lib</dd>
+<dd>bin</dd>
+<dd>obj</dd>
+</dl>
+
+<p>The output file will be <em>output.dge</em>. You can then copy this over onto the SD card in the RS97 and all being well your program will run.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">David Roberts</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Using%20docker%20to%20cross-compile%20for%20the%20RS97&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-01-31-rs97-toolchain%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-01-31-rs97-toolchain%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-01-31-rs97-toolchain%2f&amp;description=Using%20docker%20to%20cross-compile%20for%20the%20RS97"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-01-31-rs97-toolchain%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/2019-01-31-rs97-toolchain\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/2019-01-31-rs97-toolchain\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/2015-07-29-dingux3d/">
+          <section class="post">
+              <h2>OpenDingux 3D (slow edition)</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

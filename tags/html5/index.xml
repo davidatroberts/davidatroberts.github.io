@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html5 on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/html5/</link>
+    <description>Recent content in html5 on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Wed, 30 May 2012 20:20:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Coffeescript, Playbook and the game that&#39;s almost complete</title>
+      <link>https://davidatroberts.github.io/post/coffeescript-playbook-and-the-game-thats-almo/</link>
+      <pubDate>Wed, 30 May 2012 20:20:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/coffeescript-playbook-and-the-game-thats-almo/</guid>
+      <description>Prior to my previous post where I was looking into using Perlin Noise in a game I was developing a game for my recently acquired Playbook. (The Playbook itself in my opinion is a very underrated little tablet and I am thoroughly enjoying using it.) You have a set of 5 by 5 lights and the goal is to switch off all of the lights, when a light is clicked the two vertical and the two horizontal lights adjacent to the light will switch on/off depending on whether the light was lit, I&amp;rsquo;ve called it OutLikeA (original, I know).</description>
+    </item>
+    
+  </channel>
+</rss>

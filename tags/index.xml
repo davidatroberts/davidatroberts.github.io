@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/</link>
+    <description>Recent content in Tags on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Thu, 31 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>https://davidatroberts.github.io/tags/docker/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RS97</title>
+      <link>https://davidatroberts.github.io/tags/rs97/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/rs97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UselessRS97</title>
+      <link>https://davidatroberts.github.io/tags/uselessrs97/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/uselessrs97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cross-compile</title>
+      <link>https://davidatroberts.github.io/tags/cross-compile/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/cross-compile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3D</title>
+      <link>https://davidatroberts.github.io/tags/3d/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dingoo</title>
+      <link>https://davidatroberts.github.io/tags/dingoo/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/dingoo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenDingux</title>
+      <link>https://davidatroberts.github.io/tags/opendingux/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/opendingux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://davidatroberts.github.io/tags/go/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chumby</title>
+      <link>https://davidatroberts.github.io/tags/chumby/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/chumby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arduino</title>
+      <link>https://davidatroberts.github.io/tags/arduino/</link>
+      <pubDate>Sat, 16 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bigtrak</title>
+      <link>https://davidatroberts.github.io/tags/bigtrak/</link>
+      <pubDate>Sun, 15 Jul 2012 21:09:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/bigtrak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberrypi</title>
+      <link>https://davidatroberts.github.io/tags/raspberrypi/</link>
+      <pubDate>Sun, 15 Jul 2012 21:09:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/raspberrypi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coffeescript</title>
+      <link>https://davidatroberts.github.io/tags/coffeescript/</link>
+      <pubDate>Wed, 30 May 2012 20:20:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/coffeescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html5</title>
+      <link>https://davidatroberts.github.io/tags/html5/</link>
+      <pubDate>Wed, 30 May 2012 20:20:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playbook</title>
+      <link>https://davidatroberts.github.io/tags/playbook/</link>
+      <pubDate>Wed, 30 May 2012 20:20:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/playbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyserial</title>
+      <link>https://davidatroberts.github.io/tags/pyserial/</link>
+      <pubDate>Sun, 01 May 2011 16:15:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/pyserial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://davidatroberts.github.io/tags/python/</link>
+      <pubDate>Sun, 01 May 2011 16:15:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ftp</title>
+      <link>https://davidatroberts.github.io/tags/ftp/</link>
+      <pubDate>Sun, 17 Apr 2011 20:04:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/ftp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distance</title>
+      <link>https://davidatroberts.github.io/tags/distance/</link>
+      <pubDate>Mon, 14 Feb 2011 20:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/distance/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

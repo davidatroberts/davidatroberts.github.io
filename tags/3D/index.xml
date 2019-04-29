@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/3d/</link>
+    <description>Recent content in 3D on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Wed, 29 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/3d/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OpenDingux 3D (slow edition)</title>
+      <link>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</guid>
+      <description>Looking back on these posts, I should probably try to update them a little more frequently. I think I might stick to relatively short posts, that way I might actually get some more out!
+Anyway, in the last post I described how I set up a development environment that was basically Xubuntu running in a virtual machine, and then SSHing into that from OS X. Well I&amp;rsquo;ve been putting that to use building a simple little software renderer for the Dingoo.</description>
+    </item>
+    
+  </channel>
+</rss>

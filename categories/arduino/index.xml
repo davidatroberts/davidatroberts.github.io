@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arduino on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/categories/arduino/</link>
+    <description>Recent content in Arduino on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Sat, 24 Jul 2010 21:30:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/categories/arduino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arduino and Shifts</title>
+      <link>https://davidatroberts.github.io/post/arduino-and-shifts/</link>
+      <pubDate>Sat, 24 Jul 2010 21:30:06 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-and-shifts/</guid>
+      <description>After thinking about getting an Arduino for a while, I finally got around to getting one from oomlout. I purchased the budget pack, so it came with the Arduino, various length wires, LEDs, resistors, a couple of switches, two potentiometers and a photo resistor. So in all enough to get me started. I thought it was a nice touch that it came with a protoboard and plastic base to screw the arduino and the protoboard on.</description>
+    </item>
+    
+  </channel>
+</rss>

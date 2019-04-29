@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="A Ghost, an Arduino and Go"/>
+<meta name="twitter:description" content="Controlling an LED lamp with an arduino and a Go web service"/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="A Ghost, an Arduino and Go &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="Controlling an LED lamp with an arduino and a Go web service" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2013-11-16T00:00:00Z" />
+
+    
+    <meta property="article:tag" content="arduino" />
+    
+    <meta property="article:tag" content="Go" />
+    
+    
+
+    <title>A Ghost, an Arduino and Go &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="Controlling an LED lamp with an arduino and a Go web service" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": A Ghost, an Arduino and Go,
+    "name": A Ghost, an Arduino and Go,
+    "wordCount": 1101,
+    "timeRequired": "PT6M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/,
+    "datePublished": 2013-11-16T00:00Z,
+    "dateModified": 2013-09-17T00:00Z,
+    
+    "keywords": arduino, Go,
+    "description": Controlling an LED lamp with an arduino and a Go web service,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">A Ghost, an Arduino and Go</h1>
+        <small>Controlling an LED lamp with an arduino and a Go web service</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2013-11-16T00:00:00Z">
+            Nov 16, 2013
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/arduino/">#arduino</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/go/">#Go</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><img src="https://davidatroberts.github.io/images/lamp.jpg" alt="Pacman Ghost" /></p>
+
+<p>Going through Newcastle the other month, I out of habit went to visit Forbidden Planet, for comics but mainly for the toys and stuff.</p>
+
+<p>I came across what is possible one of the best lamps I have seen, I am of course talking about the LED Pacman ghost lamp. Now what makes it particularly interesting is that it comes with an infra-red (IR) remote control that can be used to change the colour as well as set a number of effects such as a fading and strobe effects.</p>
+
+<h3 id="checking-a-few-things">Checking a few things</h3>
+
+<p>After playing around with it a for a little while I thought it would be interesting to see whether the system uses the standard IR frequency. What do I mean by standard, well most TV, music systems and a lot of other devices that can be controlled by IR devices send data over the IR LEDs at a specific frequency, 38kHz to be exact. After purchasing an IR receiver that was able to receive data at this frequency it was time to dig out the Arduino.</p>
+
+<p>Without knowing the exact format the IR remote control was using to send the data I couldn&rsquo;t be sure of the individual codes or even if it was using the 38kHz frequency. After a bit of googling I found Ken Shirriff&rsquo;s multi-protocol infrared remote library for the arduino <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>. Using the example code on his website that I&rsquo;ve given below, I was able to see that the IR was using a known format and could view the individual hex codes for each of the different buttons on the remote. There are a few different formats that are used to send/receive IR codes, by default the code below will not give the format that&rsquo;s being used. To find this edit the <em>IRemote.h</em> file that can found in the IRremote folder where the Arduino library was installed and add the line <em>#define DEBUG</em>, just above the line <em>class decode_results {</em>.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">	
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;IRremote.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> RECV_PIN <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
+IRrecv <span style="color:#a6e22e">irrecv</span>(RECV_PIN);
+decode_results results;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+{
+  Serial.begin(<span style="color:#ae81ff">9600</span>);
+  irrecv.enableIRIn(); <span style="color:#75715e">// Start the receiver
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#66d9ef">if</span> (irrecv.decode(<span style="color:#f92672">&amp;</span>results)) {
+    Serial.println(results.value, HEX);
+    irrecv.resume(); <span style="color:#75715e">// Receive the next value
+</span><span style="color:#75715e"></span>  }
+}</code></pre></div>
+
+<p>From running through the code with the DEBUG flag it became apparent that it was using the NEC protocol. Now as a test I copied down one of the codes, 0xF720DF, in this case the HEX value that was sent out when the red colour was chosen and used the code below to test that it would work.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;IRremote.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>IRsend irsend;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+{
+  Serial.begin(<span style="color:#ae81ff">9600</span>);
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  irsend.sendNEC(<span style="color:#ae81ff">0xF720DF</span>, <span style="color:#ae81ff">32</span>);
+} </code></pre></div>
+
+<p>Lo and behold the lamp turned red.</p>
+
+<h3 id="software-design">Software Design</h3>
+
+<p>Having proven that it was possible to control the lamp via IR using the arduino, it was time to design the software to allow the lamp to be controlled via REST web services. I decided to use two main pieces of software, the first running on the Arduino that takes commands via serial regarding the colour and effect to use and then proceed to send these in the format the lamp expects. The second was a set a of RESTful web services written in go that receives the commands, interprets them and then sends them over serial to the arduino.</p>
+
+<h4 id="arduino">Arduino</h4>
+
+<p>The arduino code is relatively simple, there&rsquo;s just a continuous loop that reads a byte from the serial. This byte is used as a command byte that controls the type of effect that we want to show. A switch case then just parses through the command bytes,
+at the moment there are four types of commands that can be used. <em>Constant</em>, <em>flash</em>, <em>alt</em> and finally <em>off</em>.</p>
+
+<p>For the constant command the code waits for a second byte that defines the colour to use. This is then displayed on the lamp until another command is received. The flash again just takes a single byte as the colour, and alternates between showing the colour given and blank. In order to produce accurate timing I&rsquo;m using this <a href="https://github.com/JChristensen/Timer">timer</a> library. The alt command produces an effect similar to the alt command except that it takes two colours, and then alternatively flashes between two two colours. Off does what you might expect and switches the lamp off. The code for the arduino side can be found in its entirety <a href="https://gist.github.com/biomood/7493332">here</a>.</p>
+
+<h4 id="restful-web-services">RESTful web services</h4>
+
+<p>The go side is split into two parts, the first part handles the web services and the second part handles communication with the arduino via serial.</p>
+
+<p>In order to create the RESTful web services I&rsquo;m using the <a href="https://github.com/ant0ine/go-json-rest">Go-Json-Rest</a> library. An example of setting one of the handlers is below:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">handler</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">ResourceHandler</span>{}
+<span style="color:#a6e22e">handler</span>.<span style="color:#a6e22e">SetRoutes</span>(
+	<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Route</span>{<span style="color:#e6db74">&#34;POST&#34;</span>, <span style="color:#e6db74">&#34;/ghost&#34;</span>, <span style="color:#a6e22e">PostCmd</span>},
+)
+
+<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">handler</span>)</code></pre></div>
+The code for the <em>PostCmd</em> is then below, in a nutshell the function decodes the REST payload into JSON and then parses through the command contained in the JSON. The appropriate function is then called in the underlying <em>ghostlib</em> library.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">PostCmd</span>(<span style="color:#a6e22e">w</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Request</span>) {
+	<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Command</span>{}
+	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">DecodeJsonPayload</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">cmd</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">Error</span>(), <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusBadRequest</span>)
+		<span style="color:#66d9ef">return</span>
+	}
+	<span style="color:#a6e22e">err</span> = <span style="color:#66d9ef">nil</span>
+
+	<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Cmd</span> {
+	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;CONST&#34;</span>:
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Colour</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
+			<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;missing parameter&#34;</span>, <span style="color:#ae81ff">400</span>)
+		} <span style="color:#66d9ef">else</span> {
+			<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ghostlib</span>.<span style="color:#a6e22e">ConstantColour</span>(<span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Colour</span>)
+		}
+	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;FLASH&#34;</span>:
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Colour</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
+			<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;missing parameter&#34;</span>, <span style="color:#ae81ff">400</span>)
+		} <span style="color:#66d9ef">else</span> {
+			<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ghostlib</span>.<span style="color:#a6e22e">FlashColour</span>(<span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Colour</span>)
+		}
+	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;ALT&#34;</span>:
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Colour</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">ColourAlt</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
+			<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;missing parameters&#34;</span>, <span style="color:#ae81ff">400</span>)
+		} <span style="color:#66d9ef">else</span> {
+			<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ghostlib</span>.<span style="color:#a6e22e">AlternateColour</span>(<span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Colour</span>, <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">ColourAlt</span>)
+		}
+	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;ON&#34;</span>:
+		<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ghostlib</span>.<span style="color:#a6e22e">On</span>()
+	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;OFF&#34;</span>:
+		<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ghostlib</span>.<span style="color:#a6e22e">Off</span>()
+	<span style="color:#66d9ef">default</span>:
+		<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;unknown command&#34;</span>, <span style="color:#ae81ff">400</span>)
+	}
+
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;Server Error&#34;</span>, <span style="color:#ae81ff">500</span>)
+	}
+}</code></pre></div></p>
+
+<p>Data is sent to the arduino via serial and for this I&rsquo;m using the goserial library available <a href="https://github.com/tarm/goserial">here</a>. To open a connection to the arduino via serial using this library first we must set the string of the connection to make and speed, open the port and then when we&rsquo;re ready to write to the port just call Write with the bytes to send.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">serial</span>.<span style="color:#a6e22e">Config</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;/dev/tty.usbserial-A600agDn&#34;</span>, <span style="color:#a6e22e">Baud</span>: <span style="color:#ae81ff">9600</span>}
+<span style="color:#a6e22e">port</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">serial</span>.<span style="color:#a6e22e">OpenPort</span>(<span style="color:#a6e22e">c</span>)
+<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#66d9ef">error</span>)
+}
+
+<span style="color:#a6e22e">vals</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">byte</span>, <span style="color:#ae81ff">1</span>)
+<span style="color:#a6e22e">vals</span>[<span style="color:#ae81ff">0</span>] = <span style="color:#a6e22e">cmds</span>[<span style="color:#e6db74">&#34;OFF&#34;</span>]
+<span style="color:#a6e22e">port</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">vals</span>)</code></pre></div></p>
+
+<p>That pretty much covers how to send data via serial to the arduino, the full code for go RESTful web services can be found <a href="https://dl.dropboxusercontent.com/u/1995939/ArduinoIR.zip">here</a>.</p>
+
+<p>This covers part 1 of using web services to control the colour of a lamp with an arduino. In a next post I&rsquo;ll go over the android application I&rsquo;ve developed to remotely control the lamp as well as flash when a text message or phone call is made.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Available at: <a href="http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html">http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">David Roberts</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=A%20Ghost%2c%20an%20Arduino%20and%20Go&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2013-11-16-ghost-arduino-go%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2013-11-16-ghost-arduino-go%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2013-11-16-ghost-arduino-go%2f&amp;description=A%20Ghost%2c%20an%20Arduino%20and%20Go"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2013-11-16-ghost-arduino-go%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/2013-11-16-ghost-arduino-go\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/2013-11-16-ghost-arduino-go\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://davidatroberts.github.io/post/2013-11-17-chumby-go/">
+          <section class="post">
+              <h2>Chumby and Go</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/big-trak-jr-and-raspberry-pi-part-1/">
+          <section class="post">
+              <h2>Big Trak Jr and Raspberry Pi - part 1</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

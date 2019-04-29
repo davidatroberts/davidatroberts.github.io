@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/post/</link>
+    <description>Recent content in Posts on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Thu, 31 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using docker to cross-compile for the RS97</title>
+      <link>https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2019-01-31-rs97-toolchain/</guid>
+      <description>I&amp;rsquo;ve recently picked up an RS-97 handheld, it&amp;rsquo;s a neat little device that uses the old Revo K101 clone GBA shell. In the box it comes preinstalled with some emulators (and an absolute tonne of roms, being from China where copyright doesn&amp;rsquo;t seem to matter).
+Dingux was ported to the device and I&amp;rsquo;ve been using the UselessRS97 firmware. Although gameblabla, the developer, has recently stopped updating the firmware due to differences in hardware revisions - I&amp;rsquo;ve found it to be an excellent piece of software.</description>
+    </item>
+    
+    <item>
+      <title>OpenDingux 3D (slow edition)</title>
+      <link>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</guid>
+      <description>Looking back on these posts, I should probably try to update them a little more frequently. I think I might stick to relatively short posts, that way I might actually get some more out!
+Anyway, in the last post I described how I set up a development environment that was basically Xubuntu running in a virtual machine, and then SSHing into that from OS X. Well I&amp;rsquo;ve been putting that to use building a simple little software renderer for the Dingoo.</description>
+    </item>
+    
+    <item>
+      <title>OpenDingux Dev Environment for OS X (sort of)</title>
+      <link>https://davidatroberts.github.io/post/2014-10-11-opendingux/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2014-10-11-opendingux/</guid>
+      <description>A couple of years ago I picked up a Dingoo A320, it was awesome especially for commuting back and forth to Sky where I was working at the time. Anyway things change and inevitably it ended up in the back of a draw. Having moved house again, I found it, though there were a few scratches on the screen that were quickly taken care with good ol&amp;rsquo;Brasso. I decided that it was time for me to make something for it and learn SDL during the process.</description>
+    </item>
+    
+    <item>
+      <title>Chumby and Go</title>
+      <link>https://davidatroberts.github.io/post/2013-11-17-chumby-go/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2013-11-17-chumby-go/</guid>
+      <description>A number of years ago I purchased a Chumby One, basically a fancy alarm clock running linux. I&amp;rsquo;ve played with a few different languages for it but haven&amp;rsquo;t really done much with it lately. I&amp;rsquo;ve also been using a bit of Go recently and thought it might be fun to get Go running on the Chumby One, this has actually proven to be remarkably easy thanks to Go already coming with a number of compilers for different architectures.</description>
+    </item>
+    
+    <item>
+      <title>A Ghost, an Arduino and Go</title>
+      <link>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</link>
+      <pubDate>Sat, 16 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2013-11-16-ghost-arduino-go/</guid>
+      <description>Going through Newcastle the other month, I out of habit went to visit Forbidden Planet, for comics but mainly for the toys and stuff.
+I came across what is possible one of the best lamps I have seen, I am of course talking about the LED Pacman ghost lamp. Now what makes it particularly interesting is that it comes with an infra-red (IR) remote control that can be used to change the colour as well as set a number of effects such as a fading and strobe effects.</description>
+    </item>
+    
+    <item>
+      <title>Big Trak Jr and Raspberry Pi - part 1</title>
+      <link>https://davidatroberts.github.io/post/big-trak-jr-and-raspberry-pi-part-1/</link>
+      <pubDate>Sun, 15 Jul 2012 21:09:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/big-trak-jr-and-raspberry-pi-part-1/</guid>
+      <description>Browsing around the Modelzone shop in Westfields today I saw that the Big Trak Jr was on sale for £9.99. I&amp;rsquo;ve been watching these for a while but thought they were a bit too much for me to just take apart, but at the sale price I picked one up.
+As soon as I got back home I put some batteries in, had a play with it and then promptly began dissassembling it.</description>
+    </item>
+    
+    <item>
+      <title>Coffeescript, Playbook and the game that&#39;s almost complete</title>
+      <link>https://davidatroberts.github.io/post/coffeescript-playbook-and-the-game-thats-almo/</link>
+      <pubDate>Wed, 30 May 2012 20:20:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/coffeescript-playbook-and-the-game-thats-almo/</guid>
+      <description>Prior to my previous post where I was looking into using Perlin Noise in a game I was developing a game for my recently acquired Playbook. (The Playbook itself in my opinion is a very underrated little tablet and I am thoroughly enjoying using it.) You have a set of 5 by 5 lights and the goal is to switch off all of the lights, when a light is clicked the two vertical and the two horizontal lights adjacent to the light will switch on/off depending on whether the light was lit, I&amp;rsquo;ve called it OutLikeA (original, I know).</description>
+    </item>
+    
+    <item>
+      <title>Perlin Noise</title>
+      <link>https://davidatroberts.github.io/post/perlin-noise/</link>
+      <pubDate>Tue, 22 May 2012 19:42:37 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/perlin-noise/</guid>
+      <description>I&amp;rsquo;ve been quite interested lately in procedurally generated terrain and how I might be able to use this in upcoming projects, primarily just to see how to do it but it may end up in some actual games I want to develop in the future.
+There are different ways to generate 3D terrain, but one of the slightly more common ways is by using height maps and Perlin noise. Using these we can make auto generated terrain that looks natural.</description>
+    </item>
+    
+    <item>
+      <title>Chumby, lua and segmentation fault</title>
+      <link>https://davidatroberts.github.io/post/chumby-lua-and-segmentation-fault/</link>
+      <pubDate>Sun, 18 Mar 2012 17:17:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/chumby-lua-and-segmentation-fault/</guid>
+      <description>I&amp;rsquo;ve been digging through some of my older projects (read abandoned) and I came across a small lua library I had started writing to interface with the frame buffer on the Chumby, source available:
+ If I remember correctly the library works and allows you to draw to the screen using lua however it produces a segmentation fault I tracked the error down to the setup method that gets called when the library is first loaded.</description>
+    </item>
+    
+    <item>
+      <title>LOVE paged list</title>
+      <link>https://davidatroberts.github.io/post/love-paged-list/</link>
+      <pubDate>Wed, 14 Mar 2012 21:10:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/love-paged-list/</guid>
+      <description>So, the usual excuse for not posting here busy and all that&amp;hellip;although I&amp;rsquo;ve been building quite a bit just forgot to upload any of it!
+Anyhow to the point, I&amp;rsquo;ve begun rewriting one of my early lua games using the LÖVE game framework called CodeCopy. The original code is pretty rough, and so I&amp;rsquo;ve been rewriting to make use of objects and make most of it a lot more reusable. As well as adding level editor and some other nice features.</description>
+    </item>
+    
+    <item>
+      <title>Meggy Jr, Game Of Life</title>
+      <link>https://davidatroberts.github.io/post/meggy-jr-game-of-life/</link>
+      <pubDate>Sun, 18 Sep 2011 21:16:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/meggy-jr-game-of-life/</guid>
+      <description>After my last post with the Meggy Jr displaying the weather, I wanted to write a standalone app for the Meggy Jr that doesn&amp;rsquo;t connect to a PC and does a little more than just display data that&amp;rsquo;s being sent to it.
+So, I decided to implement a version of Conway&amp;rsquo;s Game of Life on the Meggy, there&amp;rsquo;s just enough pixels to make it work well and I think it looks pretty cool.</description>
+    </item>
+    
+    <item>
+      <title>Meggy Jr, weather and temperature</title>
+      <link>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</link>
+      <pubDate>Mon, 12 Sep 2011 19:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</guid>
+      <description>For my birthday my girlfriend got me a Meggy Jr! it&amp;rsquo;s an awesome build-it-yourself handheld based on the arduino platform with an 8by8 pixel RGB screen. I initially thought about creating a sort of Pacman clone, I got so far and then got bored of just copying a game that&amp;rsquo;s been done half a hundred times.
+So&amp;hellip;instead I decided to have the Meggy Jr alternately display the temperature and an icon representing the weather.</description>
+    </item>
+    
+    <item>
+      <title>Gameduino: Sprite Tutorial 1</title>
+      <link>https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/</link>
+      <pubDate>Thu, 07 Jul 2011 18:09:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/</guid>
+      <description>A few months ago on KickStarter I sponsored a project called the Gameduino, an add on shield for the Arduino, advertised as a game adapter for the Arduino. This is an awesome little device that has 32Kb of RAM, brings support for VGA output, stereo sound and has a co-processor that runs forth. See the official site for more information: http://excamera.com/sphinx/gameduino/. About two weeks ago mine arrived and since then in some of my spare time I&amp;rsquo;ve been working out how to output sprites and generally figuring out how it works.</description>
+    </item>
+    
+    <item>
+      <title>Launchpad MSP430 - binary display</title>
+      <link>https://davidatroberts.github.io/post/launchpad-msp430/</link>
+      <pubDate>Mon, 04 Jul 2011 16:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/launchpad-msp430/</guid>
+      <description>Just a quick post here about my first little test project for the MSP430 before I start on my main post about the Gameduino. I received an MSP430 Launchpad the other day, and for just over £4 I cant complain about the price. it comes with two chips, a mini-usb wire and a timing crystal. The chip itself has quite small memory constraints, 2Kb flash and 128bytes RAM, but still there&amp;rsquo;s more than enough to get something done.</description>
+    </item>
+    
+    <item>
+      <title>C64 Assembly Tutorial 1: Hello World</title>
+      <link>https://davidatroberts.github.io/post/c64-assembly/</link>
+      <pubDate>Sat, 25 Jun 2011 16:50:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/c64-assembly/</guid>
+      <description>Yes, that&amp;rsquo;s right I&amp;rsquo;m on about assembly programming for the Commodore 64, a computer that&amp;rsquo;s nearly 30 years old. You may be wondering why I would want to learn how to program for such a machine, well the first reason is that I want to learn assembly and there are many C64 assembly books around. The second reason is that I want to see what I can do with it and more about the lower level hardware and how to control it.</description>
+    </item>
+    
+    <item>
+      <title>nLove, Dingoo and fonts</title>
+      <link>https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/</link>
+      <pubDate>Fri, 10 Jun 2011 19:15:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/</guid>
+      <description>For anyone who&amp;rsquo;s been following my twitter feed you may know that I&amp;rsquo;ve been starting to develop a game in Lua and LOVE, a 2D game engine. After messing about with LOVE I found out that there was a version of love2D for the dingoo, canoo and gp2x called nLove. This is a great library that allows me to develop a game on my mac, using LOVE and then run it on my dingoo using nLove.</description>
+    </item>
+    
+    <item>
+      <title>Arduino and PySerial</title>
+      <link>https://davidatroberts.github.io/post/arduino-and-python/</link>
+      <pubDate>Sun, 01 May 2011 16:15:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-and-python/</guid>
+      <description>In an earlier post I mentioned briefly about using pySerial to send data to and from the arduino using Python, in this post I&amp;rsquo;ll go through a bit more about how to set this up.
+First you&amp;rsquo;ll need pySerial, which can be downloaded from here. For windows users there is an installer package. For other OSs, download the source from the same link and in a terminal enter the pyserial-x.y directory and then for python3 users enter _python3 setup.</description>
+    </item>
+    
+    <item>
+      <title>Arduino Thermometer</title>
+      <link>https://davidatroberts.github.io/post/arduino-thermometer/</link>
+      <pubDate>Sun, 24 Apr 2011 21:25:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-thermometer/</guid>
+      <description>A few weeks ago I was in Maplins and came across a bag of &amp;lsquo;lucky dip&amp;rsquo; displays, there were various different 7-segment displays and some LCD displays. None of them came with pin outs, as expected, the 7-segment displays were quick enough to get working, however the LCD displays are a bit more of an issue, and so I&amp;rsquo;ll leave these for another time.
+With a dual 7-segment display, a DS18B20 temperature sensor that I had and a couple of shift registers I figured that I could build a digital thermometer (exciting I know!</description>
+    </item>
+    
+    <item>
+      <title>Chumby - FTP</title>
+      <link>https://davidatroberts.github.io/post/chumby-ftp/</link>
+      <pubDate>Sun, 17 Apr 2011 20:04:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/chumby-ftp/</guid>
+      <description>I&amp;rsquo;ve been planning on turning the Chumby into a websever using lighttpd, thought it&amp;rsquo;d be kind of cool to make it do something useful rather than just standing there and showing me the time or recent facebook updates. My first idea was to just put my site on a usb disk, then run lighttpd. This was all well and good, but everytime I updated the site I had to unplug the usb disk, update the files, re-insert and then restart the chumby.</description>
+    </item>
+    
+    <item>
+      <title>Chumby - C/C&#43;&#43; Framebuffer</title>
+      <link>https://davidatroberts.github.io/post/43870836/</link>
+      <pubDate>Tue, 22 Feb 2011 21:19:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/43870836/</guid>
+      <description>Last year sometime I purchased a chumby one, with the main goal to develop some funky widgets and also I needed a new alarm clock. The widgets that are on the chumby site are all developed in flash, and I never quite got round to paying the massive price for the flash SDK, but luckily on the good ol&amp;rsquo;chumby board they&amp;rsquo;d released a C/C++ compiler. All great - except that there was no Mac OSX toolchain and I didn&amp;rsquo;t feel like trying to get it to compile on OSX, lucky for me a native C++ compiler was made available.</description>
+    </item>
+    
+    <item>
+      <title>Distance Sensors</title>
+      <link>https://davidatroberts.github.io/post/distance-sensors/</link>
+      <pubDate>Mon, 14 Feb 2011 20:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/distance-sensors/</guid>
+      <description>Since I&amp;rsquo;ve had an arduino I&amp;rsquo;ve been wanting to build a tracked robot, and slowly but surely I&amp;rsquo;ve been picking up sensors and motors to use.
+The latest sensor I&amp;rsquo;ve picked up is an infra red distance sensor namely the pololu GP2Y0D810Z0F Sharp sensor. This is a great little sensor that can detect items between 10cm and 2cm from itself, it has only 3 pins, power, ground and output. If an item is between 10cm and 2cm then the output is high, else it is low, perfect for sensing if a wall is approaching.</description>
+    </item>
+    
+    <item>
+      <title>Arduino and Shifts</title>
+      <link>https://davidatroberts.github.io/post/arduino-and-shifts/</link>
+      <pubDate>Sat, 24 Jul 2010 21:30:06 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-and-shifts/</guid>
+      <description>After thinking about getting an Arduino for a while, I finally got around to getting one from oomlout. I purchased the budget pack, so it came with the Arduino, various length wires, LEDs, resistors, a couple of switches, two potentiometers and a photo resistor. So in all enough to get me started. I thought it was a nice touch that it came with a protoboard and plastic base to screw the arduino and the protoboard on.</description>
+    </item>
+    
+  </channel>
+</rss>

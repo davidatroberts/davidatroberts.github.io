@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Arduino Gmail Checker - Dave&#39;s Hacks</title>
+  <meta property="og:title" content="Arduino Gmail Checker - Dave&#39;s Hacks" />
+  <meta name="twitter:title" content="Arduino Gmail Checker - Dave&#39;s Hacks" />
+  <meta name="description" content="I&rsquo;ve started picking up a few more bits and pieces and came across some 7-segment displays, after thinking of a few ideas for these I decided on using it to display the number of unread emails I have on my gmail account.
+Intro
+The displays I picked up are anode displays, meaning they take a positive voltage and to light one of the segments you have to send a LOW (ground) signal to.">
+  <meta property="og:description" content="I&rsquo;ve started picking up a few more bits and pieces and came across some 7-segment displays, after thinking of a few ideas for these I decided on using it to display the number of unread emails I have on my gmail account.
+Intro
+The displays I picked up are anode displays, meaning they take a positive voltage and to light one of the segments you have to send a LOW (ground) signal to.">
+  <meta name="twitter:description" content="I&rsquo;ve started picking up a few more bits and pieces and came across some 7-segment displays, after thinking of a few ideas for these I decided on using it to display the number of unread emails I …">
+  <meta name="author" content="David Roberts"/>
+  <meta property="og:site_name" content="Dave&#39;s Hacks" />
+  <meta property="og:url" content="https://davidatroberts.github.io/post/arduino-gmail-checker/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+
+  <script src="/js/script.js"></script>
+  <script src="/js/custom.js"></script>
+  <script defer src="/js/fontawesome.js"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">Dave&#39;s Hacks</a></h1>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+      <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
+      <li class="site-navi-item-about"><a href="/about/" title="About">About</a></li>
+    </ul>
+  </nav>
+</header>
+<hr class="site-header-bottom">
+
+  <div class="main" role="main">
+    <article class="article">
+      
+      
+      <h1 class="article-title">Arduino Gmail Checker</h1>
+      
+      <hr class="article-title-bottom">
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>January 11, 2011</time></li>
+        <li class="article-meta-tags">
+          <a href="/tags/arduino/">
+            <i class="fas fa-tag"></i>
+            arduino
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/python/">
+            <i class="fas fa-tag"></i>
+            python
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/shift/">
+            <i class="fas fa-tag"></i>
+            shift
+          </a>&nbsp;
+        </li>
+      </ul>
+      
+<aside class="toc">
+  
+</aside>
+      <p>I&rsquo;ve started picking up a few more bits and pieces and came across some 7-segment displays, after thinking of a few ideas for these I decided on using it to display the number of unread emails I have on my gmail account.</p>
+
+<p><strong>Intro</strong></p>
+
+<p>The displays I picked up are anode displays, meaning they take a positive voltage and to light one of the segments you have to send a LOW (ground) signal to. The displays themselves have a whopping 13 pins! After checking the schematics for them, a number of the pins were spare ground pins and there was an extra pin for a decimal dot in the bottom right corner. This left 7 pins that would need to be connected to the arduino, so not wanting to use up so many inputs and with a 74HC595 shift register lying around I decided to connect the display up to the shift register, saving myself 4 input pins in the process.</p>
+
+<p><strong>Getting it Working</strong></p>
+
+<p>First, after hooking up all of the wires and checking that the display worked, I had to find out which pin controlled which segment, a trial and error process, plug it in, see what lights up. The next job was just to get the shift register working with the segment display, with help from <a href="http://www.arduino.cc/en/Tutorial/ShiftOut">http://www.arduino.cc/en/Tutorial/ShiftOut</a> and a lot of help from <a href="http://www.oleweidner.com/2010/10/12/dimmable-7-seg-common-anode-display-with-arduino-74hc595/">http://www.oleweidner.com/2010/10/12/dimmable-7-seg-common-anode-display-with-arduino-74hc595/</a> this wasn&rsquo;t too bad. Only slight difference is the different pin layout of the display meant that the character set binary codes were different from the second link.</p>
+
+<p><strong>Displaying a Number</strong></p>
+
+<p>Now that I had it all connected and worked out the character set for the display, the next job was to get it displaying numbers! Using the shift register this is a case of setting the latchPin to HIGH, (remember anode everything is done reverse) and write the number out and then set to LOW.</p>
+
+<p><strong>Talking to the PC</strong></p>
+
+<p>After getting the display working and getting it to cycle through the numbers 0-9, the next job was to send numbers from the PC to the arduino via the terminal and then displaying the correct number on the display. This can be easily done by using the _serial _library to first check when the serial is available, and then reading the data from the terminal, as so:</p>
+
+<p><em>if (serial.available() &gt; 0) {</em></p>
+
+<p>_ something  = serial.read();_</p>
+
+<p><em>}</em></p>
+
+<p>Nice and easy, all I had to do was read a byte from the terminal, knock 48 off the number (the number sent across the terminal will be in ascii, have to knock 48 off to get the value) and then use the method developed previously to display the number.</p>
+
+<p><strong>Python and Automatic Checking</strong></p>
+
+<p>To get the arduino to automatically display the number of unread emails, I decided to use a quick Python script that checks my gmail account, gets the unread messages and then sends this value to the arduino via the terminal every minute. To check my gmail I used this handy piece of code found at <a href="http://www.martinbrook.com/python-snippet-check-status-of-your-gmail-inbox/">http://www.martinbrook.com/python-snippet-check-status-of-your-gmail-inbox/</a> this returns a tuple that contains your number of messages and number of unread messages, perfect! Now all I had to do was send the data to the arduino, this was solved by a python library called pySerial that can read and write to a connected arduino via the terminal. With a while loop and sleep, the script was complete.</p>
+
+<p>All the code is attached as well as pics of the device.</p>
+
+<p>Python code: <a href="http://dl.dropbox.com/u/1995939/Arduino/Gmail/gmail.py">http://dl.dropbox.com/u/1995939/Arduino/Gmail/gmail.py</a></p>
+
+<p>Arduino code: <a href="http://dl.dropbox.com/u/1995939/Arduino/Gmail/EmailSegment.pde">http://dl.dropbox.com/u/1995939/Arduino/Gmail/EmailSegment.pde</a></p>
+
+<p><a href="http://davidrobertsblog.files.wordpress.com/2011/01/photo-scaled1000.jpg"><img src="http://davidrobertsblog.files.wordpress.com/2011/01/photo-scaled1000.jpg?w=300" alt="Photo" /></a></p>
+
+    </article>
+
+    
+
+    <div class="disqus-comments">
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "daveshacks" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/post/distance-sensors/" data-toggle="tooltip" data-placement="top" title="Distance Sensors">&lt; Newer</a>
+      </li>
+      <li class="pager-older">
+        <a href="/post/arduino-and-shifts/" data-toggle="tooltip" data-placement="top" title="Arduino and Shifts">Older &gt;</a>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright">&copy; Copyright 2019 David Roberts</div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-about"><a href="/about/" title="About">About</a></li>
+  </ul>
+  <div class="powerdby">
+    Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/taikii/whiteplain">Whiteplain</a>
+  </div>
+</div>
+
+
+</body>
+</html>
