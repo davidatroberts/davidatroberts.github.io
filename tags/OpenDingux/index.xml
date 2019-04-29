@@ -14,10 +14,10 @@
     
     <item>
       <title>OpenDingux 3D (slow edition)</title>
-      <link>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</link>
+      <link>https://davidatroberts.github.io/post/2015-07-29-dingux3d_temp/</link>
       <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://davidatroberts.github.io/post/2015-07-29-dingux3d/</guid>
+      <guid>https://davidatroberts.github.io/post/2015-07-29-dingux3d_temp/</guid>
       <description>Looking back on these posts, I should probably try to update them a little more frequently. I think I might stick to relatively short posts, that way I might actually get some more out!
 Anyway, in the last post I described how I set up a development environment that was basically Xubuntu running in a virtual machine, and then SSHing into that from OS X. Well I&amp;rsquo;ve been putting that to use building a simple little software renderer for the Dingoo.</description>
     </item>
