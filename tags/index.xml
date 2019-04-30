@@ -13,7 +13,16 @@
     
     
     <item>
-      <title>Docker</title>
+      <title>cross-compile</title>
+      <link>https://davidatroberts.github.io/tags/cross-compile/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/cross-compile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
       <link>https://davidatroberts.github.io/tags/docker/</link>
       <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -22,7 +31,7 @@
     </item>
     
     <item>
-      <title>RS97</title>
+      <title>rs97</title>
       <link>https://davidatroberts.github.io/tags/rs97/</link>
       <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -31,20 +40,11 @@
     </item>
     
     <item>
-      <title>UselessRS97</title>
+      <title>uselessrs97</title>
       <link>https://davidatroberts.github.io/tags/uselessrs97/</link>
       <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://davidatroberts.github.io/tags/uselessrs97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cross-compile</title>
-      <link>https://davidatroberts.github.io/tags/cross-compile/</link>
-      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://davidatroberts.github.io/tags/cross-compile/</guid>
       <description></description>
     </item>
     
@@ -76,20 +76,20 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://davidatroberts.github.io/tags/go/</link>
-      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://davidatroberts.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>chumby</title>
       <link>https://davidatroberts.github.io/tags/chumby/</link>
       <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://davidatroberts.github.io/tags/chumby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://davidatroberts.github.io/tags/go/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/go/</guid>
       <description></description>
     </item>
     
