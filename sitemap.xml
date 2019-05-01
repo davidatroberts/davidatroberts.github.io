@@ -15,13 +15,31 @@
   </url>
   
   <url>
+    <loc>https://davidatroberts.github.io/tags/docker/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://davidatroberts.github.io/post/</loc>
     <lastmod>2019-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://davidatroberts.github.io/tags/rs97/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://davidatroberts.github.io/tags/</loc>
+    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/uselessrs97/</loc>
     <lastmod>2019-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -39,24 +57,6 @@
   
   <url>
     <loc>https://davidatroberts.github.io/tags/cross-compile/</loc>
-    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://davidatroberts.github.io/tags/docker/</loc>
-    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://davidatroberts.github.io/tags/rs97/</loc>
-    <lastmod>2019-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://davidatroberts.github.io/tags/uselessrs97/</loc>
     <lastmod>2019-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -95,13 +95,13 @@
   </url>
   
   <url>
-    <loc>https://davidatroberts.github.io/tags/go/</loc>
+    <loc>https://davidatroberts.github.io/tags/chumby/</loc>
     <lastmod>2013-11-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davidatroberts.github.io/tags/chumby/</loc>
+    <loc>https://davidatroberts.github.io/tags/go/</loc>
     <lastmod>2013-11-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
