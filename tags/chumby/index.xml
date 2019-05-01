@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Chumby, lua and segmentation fault</title>
+      <link>https://davidatroberts.github.io/post/chumby-lua-and-segmentation-fault/</link>
+      <pubDate>Sun, 18 Mar 2012 17:17:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/chumby-lua-and-segmentation-fault/</guid>
+      <description>I&amp;rsquo;ve been digging through some of my older projects (read abandoned) and I came across a small lua library I had started writing to interface with the frame buffer on the Chumby, source available:
+ If I remember correctly the library works and allows you to draw to the screen using lua however it produces a segmentation fault I tracked the error down to the setup method that gets called when the library is first loaded.</description>
+    </item>
+    
+    <item>
       <title>Chumby - FTP</title>
       <link>https://davidatroberts.github.io/post/chumby-ftp/</link>
       <pubDate>Sun, 17 Apr 2011 20:04:00 +0000</pubDate>

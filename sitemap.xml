@@ -95,13 +95,13 @@
   </url>
   
   <url>
-    <loc>https://davidatroberts.github.io/tags/go/</loc>
+    <loc>https://davidatroberts.github.io/tags/chumby/</loc>
     <lastmod>2013-11-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davidatroberts.github.io/tags/chumby/</loc>
+    <loc>https://davidatroberts.github.io/tags/go/</loc>
     <lastmod>2013-11-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -158,6 +158,12 @@
   </url>
   
   <url>
+    <loc>https://davidatroberts.github.io/tags/perlin/</loc>
+    <lastmod>2012-05-22T19:42:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://davidatroberts.github.io/post/perlin-noise/</loc>
     <lastmod>2012-05-22T19:42:37+00:00</lastmod>
   </url>
@@ -168,8 +174,20 @@
   </url>
   
   <url>
+    <loc>https://davidatroberts.github.io/tags/lua/</loc>
+    <lastmod>2012-03-18T17:17:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://davidatroberts.github.io/post/love-paged-list/</loc>
     <lastmod>2012-03-14T21:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/love/</loc>
+    <lastmod>2012-03-14T21:10:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

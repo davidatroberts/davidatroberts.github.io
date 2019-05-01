@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>love on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/love/</link>
+    <description>Recent content in love on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Wed, 14 Mar 2012 21:10:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/love/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LOVE paged list</title>
+      <link>https://davidatroberts.github.io/post/love-paged-list/</link>
+      <pubDate>Wed, 14 Mar 2012 21:10:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/love-paged-list/</guid>
+      <description>So, the usual excuse for not posting here busy and all that&amp;hellip;although I&amp;rsquo;ve been building quite a bit just forgot to upload any of it!
+Anyhow to the point, I&amp;rsquo;ve begun rewriting one of my early lua games using the LOVE game framework called CodeCopy. The original code is pretty rough, and so I&amp;rsquo;ve been rewriting to make use of objects and make most of it a lot more reusable. As well as adding level editor and some other nice features.</description>
+    </item>
+    
+  </channel>
+</rss>

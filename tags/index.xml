@@ -76,20 +76,20 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://davidatroberts.github.io/tags/go/</link>
-      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://davidatroberts.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>chumby</title>
       <link>https://davidatroberts.github.io/tags/chumby/</link>
       <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://davidatroberts.github.io/tags/chumby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://davidatroberts.github.io/tags/go/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/go/</guid>
       <description></description>
     </item>
     
@@ -144,6 +144,33 @@
       <pubDate>Wed, 30 May 2012 20:20:00 +0000</pubDate>
       
       <guid>https://davidatroberts.github.io/tags/playbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perlin</title>
+      <link>https://davidatroberts.github.io/tags/perlin/</link>
+      <pubDate>Tue, 22 May 2012 19:42:37 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/perlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lua</title>
+      <link>https://davidatroberts.github.io/tags/lua/</link>
+      <pubDate>Sun, 18 Mar 2012 17:17:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>love</title>
+      <link>https://davidatroberts.github.io/tags/love/</link>
+      <pubDate>Wed, 14 Mar 2012 21:10:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/tags/love/</guid>
       <description></description>
     </item>
     

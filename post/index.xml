@@ -106,7 +106,7 @@ There are different ways to generate 3D terrain, but one of the slightly more co
       
       <guid>https://davidatroberts.github.io/post/love-paged-list/</guid>
       <description>So, the usual excuse for not posting here busy and all that&amp;hellip;although I&amp;rsquo;ve been building quite a bit just forgot to upload any of it!
-Anyhow to the point, I&amp;rsquo;ve begun rewriting one of my early lua games using the LÖVE game framework called CodeCopy. The original code is pretty rough, and so I&amp;rsquo;ve been rewriting to make use of objects and make most of it a lot more reusable. As well as adding level editor and some other nice features.</description>
+Anyhow to the point, I&amp;rsquo;ve begun rewriting one of my early lua games using the LOVE game framework called CodeCopy. The original code is pretty rough, and so I&amp;rsquo;ve been rewriting to make use of objects and make most of it a lot more reusable. As well as adding level editor and some other nice features.</description>
     </item>
     
     <item>

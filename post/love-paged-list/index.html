@@ -32,6 +32,10 @@
     <meta property="article:published_time" content="2012-03-14T21:10:00Z" />
 
     
+    <meta property="article:tag" content="love" />
+    
+    <meta property="article:tag" content="lua" />
+    
     
 
     <title>LOVE paged list &middot; Dave&#39;s Hacks</title>
@@ -108,7 +112,7 @@ Anyhow to the " />
     "datePublished": 2012-03-14T21:10Z,
     "dateModified": 2012-03-14T21:10Z,
     
-    
+    "keywords": love, lua,
     "description": ,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -191,13 +195,17 @@ Anyhow to the " />
           </time>
         
          
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/love/">#love</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/lua/">#lua</a></span>
+         
         </section>
     </header>
 
     <section class="post-content">
       <p>So, the usual excuse for not posting here busy and all that&hellip;although I&rsquo;ve been building quite a bit just forgot to upload any of it!</p>
 
-<p>Anyhow to the point, I&rsquo;ve begun rewriting one of my early lua games using the LÖVE game framework called CodeCopy. The original code is pretty rough, and so I&rsquo;ve been rewriting to make use of objects and make most of it a lot more reusable. As well as adding level editor and some other nice features.</p>
+<p>Anyhow to the point, I&rsquo;ve begun rewriting one of my early lua games using the LOVE game framework called CodeCopy. The original code is pretty rough, and so I&rsquo;ve been rewriting to make use of objects and make most of it a lot more reusable. As well as adding level editor and some other nice features.</p>
 
 <p>One of the components I&rsquo;ve built during this is a paged list, you give it a function that returns an array of rows and it then displays by default 4 rows on each page and the next/back buttons with each row having a title, as well as an associated image/alternative image. By passing in a callback function you get notice when a row was selected and can do what you want there. Any of the default options can be overridden by passing in overriding values.</p>
 
