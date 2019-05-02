@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
-    <lastBuildDate>Sun, 01 May 2011 16:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Sep 2011 19:46:00 +0000</lastBuildDate>
     
 	<atom:link href="https://davidatroberts.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Meggy Jr, weather and temperature</title>
+      <link>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</link>
+      <pubDate>Mon, 12 Sep 2011 19:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</guid>
+      <description>For my birthday my girlfriend got me a Meggy Jr! it&amp;rsquo;s an awesome build-it-yourself handheld based on the arduino platform with an 8by8 pixel RGB screen. I initially thought about creating a sort of Pacman clone, I got so far and then got bored of just copying a game that&amp;rsquo;s been done half a hundred times.
+So&amp;hellip;instead I decided to have the Meggy Jr alternately display the temperature and an icon representing the weather.</description>
+    </item>
+    
+    <item>
+      <title>Gameduino: Sprite Tutorial 1</title>
+      <link>https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/</link>
+      <pubDate>Thu, 07 Jul 2011 18:09:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/</guid>
+      <description>A few months ago on KickStarter I sponsored a project called the Gameduino, an add on shield for the Arduino, advertised as a game adapter for the Arduino. This is an awesome little device that has 32Kb of RAM, brings support for VGA output, stereo sound and has a co-processor that runs forth. See the official site for more information: http://excamera.com/sphinx/gameduino/. About two weeks ago mine arrived and since then in some of my spare time I&amp;rsquo;ve been working out how to output sprites and generally figuring out how it works.</description>
+    </item>
     
     <item>
       <title>Arduino and PySerial</title>

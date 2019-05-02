@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>assembly on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/assembly/</link>
+    <description>Recent content in assembly on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Sat, 25 Jun 2011 16:50:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C64 Assembly Tutorial 1: Hello World</title>
+      <link>https://davidatroberts.github.io/post/c64-assembly/</link>
+      <pubDate>Sat, 25 Jun 2011 16:50:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/c64-assembly/</guid>
+      <description>Yes, that&amp;rsquo;s right I&amp;rsquo;m on about assembly programming for the Commodore 64, a computer that&amp;rsquo;s nearly 30 years old. You may be wondering why I would want to learn how to program for such a machine, well the first reason is that I want to learn assembly and there are many C64 assembly books around. The second reason is that I want to see what I can do with it and more about the lower level hardware and how to control it.</description>
+    </item>
+    
+  </channel>
+</rss>

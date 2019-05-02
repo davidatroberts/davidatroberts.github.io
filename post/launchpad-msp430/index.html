@@ -32,6 +32,10 @@
     <meta property="article:published_time" content="2011-07-04T16:46:00Z" />
 
     
+    <meta property="article:tag" content="launchpad" />
+    
+    <meta property="article:tag" content="msp430" />
+    
     
 
     <title>Launchpad MSP430 - binary display &middot; Dave&#39;s Hacks</title>
@@ -107,7 +111,7 @@
     "datePublished": 2011-07-04T16:46Z,
     "dateModified": 2011-07-04T16:46Z,
     
-    
+    "keywords": launchpad, msp430,
     "description": ,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -190,11 +194,15 @@
           </time>
         
          
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/launchpad/">#launchpad</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/msp430/">#msp430</a></span>
+         
         </section>
     </header>
 
     <section class="post-content">
-      <p>Just a quick post here about my first little test project for the MSP430 before I start on my main post about the Gameduino. I received an MSP430 Launchpad the other day, and for just over £4 I cant complain about the price. it comes with two chips, a mini-usb wire and a timing crystal. The chip itself has quite small memory constraints, 2Kb flash and 128bytes RAM, but still there&rsquo;s more than enough to get something done.</p>
+      <p>Just a quick post here about my first little test project for the MSP430 before I start on my main post about the Gameduino. I received an MSP430 Launchpad the other day, and for just over £4 I can&rsquo;t complain about the price. it comes with two chips, a mini-usb wire and a timing crystal. The chip itself has quite small memory constraints, 2Kb flash and 128bytes RAM, but still there&rsquo;s more than enough to get something done.</p>
 
 <p>After installing the compiler for osx available <a href="http://osx-launchpad.blogspot.com/2010/11/hello-world.html">here</a> (Thanks to Javi, who did all the hard work in getting the launchpad compiler working on osx) and uploading the demo to ensure all was working correctly I got to work on doing something interesting with the chip. So, I&rsquo;ve put together some C code that takes an unsigned char value and uses two LEDs to display the binary representation. The red LED represents 1, and the white LED represents 0, the green LED just indicates the start and end of the sequence.</p>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>meggy on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/meggy/</link>
+    <description>Recent content in meggy on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Sun, 18 Sep 2011 21:16:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/meggy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Meggy Jr, Game Of Life</title>
+      <link>https://davidatroberts.github.io/post/meggy-jr-game-of-life/</link>
+      <pubDate>Sun, 18 Sep 2011 21:16:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/meggy-jr-game-of-life/</guid>
+      <description>After my last post with the Meggy Jr displaying the weather, I wanted to write a standalone app for the Meggy Jr that doesn&amp;rsquo;t connect to a PC and does a little more than just display data that&amp;rsquo;s being sent to it.
+So, I decided to implement a version of Conway&amp;rsquo;s Game of Life on the Meggy, there&amp;rsquo;s just enough pixels to make it work well and I think it looks pretty cool.</description>
+    </item>
+    
+    <item>
+      <title>Meggy Jr, weather and temperature</title>
+      <link>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</link>
+      <pubDate>Mon, 12 Sep 2011 19:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</guid>
+      <description>For my birthday my girlfriend got me a Meggy Jr! it&amp;rsquo;s an awesome build-it-yourself handheld based on the arduino platform with an 8by8 pixel RGB screen. I initially thought about creating a sort of Pacman clone, I got so far and then got bored of just copying a game that&amp;rsquo;s been done half a hundred times.
+So&amp;hellip;instead I decided to have the Meggy Jr alternately display the temperature and an icon representing the weather.</description>
+    </item>
+    
+  </channel>
+</rss>

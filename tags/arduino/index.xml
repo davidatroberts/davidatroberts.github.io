@@ -23,6 +23,35 @@ I came across what is possible one of the best lamps I have seen, I am of course
     </item>
     
     <item>
+      <title>Meggy Jr, Game Of Life</title>
+      <link>https://davidatroberts.github.io/post/meggy-jr-game-of-life/</link>
+      <pubDate>Sun, 18 Sep 2011 21:16:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/meggy-jr-game-of-life/</guid>
+      <description>After my last post with the Meggy Jr displaying the weather, I wanted to write a standalone app for the Meggy Jr that doesn&amp;rsquo;t connect to a PC and does a little more than just display data that&amp;rsquo;s being sent to it.
+So, I decided to implement a version of Conway&amp;rsquo;s Game of Life on the Meggy, there&amp;rsquo;s just enough pixels to make it work well and I think it looks pretty cool.</description>
+    </item>
+    
+    <item>
+      <title>Meggy Jr, weather and temperature</title>
+      <link>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</link>
+      <pubDate>Mon, 12 Sep 2011 19:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/meggy-jr-weather-and-temperature/</guid>
+      <description>For my birthday my girlfriend got me a Meggy Jr! it&amp;rsquo;s an awesome build-it-yourself handheld based on the arduino platform with an 8by8 pixel RGB screen. I initially thought about creating a sort of Pacman clone, I got so far and then got bored of just copying a game that&amp;rsquo;s been done half a hundred times.
+So&amp;hellip;instead I decided to have the Meggy Jr alternately display the temperature and an icon representing the weather.</description>
+    </item>
+    
+    <item>
+      <title>Gameduino: Sprite Tutorial 1</title>
+      <link>https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/</link>
+      <pubDate>Thu, 07 Jul 2011 18:09:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/gameduino-sprite-tutorial-1/</guid>
+      <description>A few months ago on KickStarter I sponsored a project called the Gameduino, an add on shield for the Arduino, advertised as a game adapter for the Arduino. This is an awesome little device that has 32Kb of RAM, brings support for VGA output, stereo sound and has a co-processor that runs forth. See the official site for more information: http://excamera.com/sphinx/gameduino/. About two weeks ago mine arrived and since then in some of my spare time I&amp;rsquo;ve been working out how to output sprites and generally figuring out how it works.</description>
+    </item>
+    
+    <item>
       <title>Arduino and PySerial</title>
       <link>https://davidatroberts.github.io/post/arduino-and-python/</link>
       <pubDate>Sun, 01 May 2011 16:15:00 +0000</pubDate>
@@ -33,6 +62,16 @@ First you&amp;rsquo;ll need pySerial, which can be downloaded from here. For win
     </item>
     
     <item>
+      <title>Arduino Thermometer</title>
+      <link>https://davidatroberts.github.io/post/arduino-thermometer/</link>
+      <pubDate>Sun, 24 Apr 2011 21:25:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-thermometer/</guid>
+      <description>A few weeks ago I was in Maplins and came across a bag of &amp;lsquo;lucky dip&amp;rsquo; displays, there were various different 7-segment displays and some LCD displays. None of them came with pin outs, as expected, the 7-segment displays were quick enough to get working, however the LCD displays are a bit more of an issue, and so I&amp;rsquo;ll leave these for another time.
+With a dual 7-segment display, a DS18B20 temperature sensor that I had and a couple of shift registers I figured that I could build a digital thermometer (exciting I know!</description>
+    </item>
+    
+    <item>
       <title>Distance Sensors</title>
       <link>https://davidatroberts.github.io/post/distance-sensors/</link>
       <pubDate>Mon, 14 Feb 2011 20:46:00 +0000</pubDate>
@@ -40,6 +79,15 @@ First you&amp;rsquo;ll need pySerial, which can be downloaded from here. For win
       <guid>https://davidatroberts.github.io/post/distance-sensors/</guid>
       <description>Since I&amp;rsquo;ve had an arduino I&amp;rsquo;ve been wanting to build a tracked robot, and slowly but surely I&amp;rsquo;ve been picking up sensors and motors to use.
 The latest sensor I&amp;rsquo;ve picked up is an infra red distance sensor namely the pololu GP2Y0D810Z0F Sharp sensor. This is a great little sensor that can detect items between 10cm and 2cm from itself, it has only 3 pins, power, ground and output. If an item is between 10cm and 2cm then the output is high, else it is low, perfect for sensing if a wall is approaching.</description>
+    </item>
+    
+    <item>
+      <title>Arduino and Shifts</title>
+      <link>https://davidatroberts.github.io/post/arduino-and-shifts/</link>
+      <pubDate>Sat, 24 Jul 2010 21:30:06 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/arduino-and-shifts/</guid>
+      <description>After thinking about getting an Arduino for a while, I finally got around to getting one from oomlout. I purchased the budget pack, so it came with the Arduino, various length wires, LEDs, resistors, a couple of switches, two potentiometers and a photo resistor. So in all enough to get me started. I thought it was a nice touch that it came with a protoboard and plastic base to screw the arduino and the protoboard on.</description>
     </item>
     
   </channel>

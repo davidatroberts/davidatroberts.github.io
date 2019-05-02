@@ -22,5 +22,14 @@
 Anyhow to the point, I&amp;rsquo;ve begun rewriting one of my early lua games using the LOVE game framework called CodeCopy. The original code is pretty rough, and so I&amp;rsquo;ve been rewriting to make use of objects and make most of it a lot more reusable. As well as adding level editor and some other nice features.</description>
     </item>
     
+    <item>
+      <title>nLove, Dingoo and fonts</title>
+      <link>https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/</link>
+      <pubDate>Fri, 10 Jun 2011 19:15:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/</guid>
+      <description>For anyone who&amp;rsquo;s been following my twitter feed you may know that I&amp;rsquo;ve been starting to develop a game in Lua and LOVE, a 2D game engine. After messing about with LOVE I found out that there was a version of love2D for the dingoo, canoo and gp2x called nLove. This is a great library that allows me to develop a game on my mac, using LOVE and then run it on my dingoo using nLove.</description>
+    </item>
+    
   </channel>
 </rss>

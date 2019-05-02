@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>msp430 on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/msp430/</link>
+    <description>Recent content in msp430 on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Mon, 04 Jul 2011 16:46:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/msp430/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Launchpad MSP430 - binary display</title>
+      <link>https://davidatroberts.github.io/post/launchpad-msp430/</link>
+      <pubDate>Mon, 04 Jul 2011 16:46:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/launchpad-msp430/</guid>
+      <description>Just a quick post here about my first little test project for the MSP430 before I start on my main post about the Gameduino. I received an MSP430 Launchpad the other day, and for just over £4 I can&amp;rsquo;t complain about the price. it comes with two chips, a mini-usb wire and a timing crystal. The chip itself has quite small memory constraints, 2Kb flash and 128bytes RAM, but still there&amp;rsquo;s more than enough to get something done.</description>
+    </item>
+    
+  </channel>
+</rss>

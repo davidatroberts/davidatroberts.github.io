@@ -40,5 +40,14 @@
       <description>I&amp;rsquo;ve been planning on turning the Chumby into a websever using lighttpd, thought it&amp;rsquo;d be kind of cool to make it do something useful rather than just standing there and showing me the time or recent facebook updates. My first idea was to just put my site on a usb disk, then run lighttpd. This was all well and good, but everytime I updated the site I had to unplug the usb disk, update the files, re-insert and then restart the chumby.</description>
     </item>
     
+    <item>
+      <title>Chumby - C/C&#43;&#43; Framebuffer</title>
+      <link>https://davidatroberts.github.io/post/43870836/</link>
+      <pubDate>Tue, 22 Feb 2011 21:19:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/43870836/</guid>
+      <description>Last year sometime I purchased a chumby one, with the main goal to develop some funky widgets and also I needed a new alarm clock. The widgets that are on the chumby site are all developed in flash, and I never quite got round to paying the massive price for the flash SDK, but luckily on the good ol&amp;rsquo;chumby board they&amp;rsquo;d released a C/C++ compiler. All great - except that there was no Mac OSX toolchain and I didn&amp;rsquo;t feel like trying to get it to compile on OSX, lucky for me a native C++ compiler was made available.</description>
+    </item>
+    
   </channel>
 </rss>

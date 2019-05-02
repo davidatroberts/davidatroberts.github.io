@@ -31,5 +31,14 @@ Anyway, in the last post I described how I set up a development environment that
       <description>A couple of years ago I picked up a Dingoo A320, it was awesome especially for commuting back and forth to Sky where I was working at the time. Anyway things change and inevitably it ended up in the back of a draw. Having moved house again, I found it, though there were a few scratches on the screen that were quickly taken care with good ol&amp;rsquo;Brasso. I decided that it was time for me to make something for it and learn SDL during the process.</description>
     </item>
     
+    <item>
+      <title>nLove, Dingoo and fonts</title>
+      <link>https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/</link>
+      <pubDate>Fri, 10 Jun 2011 19:15:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/nlove-dingoo-and-fonts/</guid>
+      <description>For anyone who&amp;rsquo;s been following my twitter feed you may know that I&amp;rsquo;ve been starting to develop a game in Lua and LOVE, a 2D game engine. After messing about with LOVE I found out that there was a version of love2D for the dingoo, canoo and gp2x called nLove. This is a great library that allows me to develop a game on my mac, using LOVE and then run it on my dingoo using nLove.</description>
+    </item>
+    
   </channel>
 </rss>
