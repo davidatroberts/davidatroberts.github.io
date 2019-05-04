@@ -60,5 +60,15 @@ Anyway, in the last post I described how I set up a development environment that
 I came across what is possible one of the best lamps I have seen, I am of course talking about the LED Pacman ghost lamp. Now what makes it particularly interesting is that it comes with an infra-red (IR) remote control that can be used to change the colour as well as set a number of effects such as a fading and strobe effects.</description>
     </item>
     
+    <item>
+      <title>Refreshing the Blog and Moving Some Old Cotent</title>
+      <link>https://davidatroberts.github.io/post/2019-05-04-hugo-and-migration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2019-05-04-hugo-and-migration/</guid>
+      <description>I&amp;rsquo;ve recently moved the blog from using a really old version of Jekyll to Hugo. I wass really just looking for something a bit more lightweight and my old blog was failing to build on a new version of Jekyll anyway.
+You may also notice that I&amp;rsquo;ve imported a lot of old content from a wordpress blog that I used to have before this one. I&amp;rsquo;ve took a bit of time to fix some old links to code examples and such that were broken.</description>
+    </item>
+    
   </channel>
 </rss>

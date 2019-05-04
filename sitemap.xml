@@ -325,4 +325,18 @@
     <loc>https://davidatroberts.github.io/about/</loc>
   </url>
   
+  <url>
+    <loc>https://davidatroberts.github.io/tags/blog/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/tags/hugo/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davidatroberts.github.io/post/2019-05-04-hugo-and-migration/</loc>
+  </url>
+  
 </urlset>
