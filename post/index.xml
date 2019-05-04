@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
-    <lastBuildDate>Thu, 31 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://davidatroberts.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Refreshing the Blog and Moving Some Old Cotent</title>
+      <link>https://davidatroberts.github.io/post/2019-05-04-hugo-and-migration/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2019-05-04-hugo-and-migration/</guid>
+      <description>I&amp;rsquo;ve recently moved the blog from using a really old version of Jekyll to Hugo. I wass really just looking for something a bit more lightweight and my old blog was failing to build on a new version of Jekyll anyway.
+You may also notice that I&amp;rsquo;ve imported a lot of old content from a wordpress blog that I used to have before this one. I&amp;rsquo;ve took a bit of time to fix some old links to code examples and such that were broken.</description>
+    </item>
     
     <item>
       <title>Using docker to cross-compile for the RS97</title>
@@ -220,16 +230,6 @@ The latest sensor I&amp;rsquo;ve picked up is an infra red distance sensor namel
       
       <guid>https://davidatroberts.github.io/post/arduino-and-shifts/</guid>
       <description>After thinking about getting an Arduino for a while, I finally got around to getting one from oomlout. I purchased the budget pack, so it came with the Arduino, various length wires, LEDs, resistors, a couple of switches, two potentiometers and a photo resistor. So in all enough to get me started. I thought it was a nice touch that it came with a protoboard and plastic base to screw the arduino and the protoboard on.</description>
-    </item>
-    
-    <item>
-      <title>Refreshing the Blog and Moving Some Old Cotent</title>
-      <link>https://davidatroberts.github.io/post/2019-05-04-hugo-and-migration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://davidatroberts.github.io/post/2019-05-04-hugo-and-migration/</guid>
-      <description>I&amp;rsquo;ve recently moved the blog from using a really old version of Jekyll to Hugo. I wass really just looking for something a bit more lightweight and my old blog was failing to build on a new version of Jekyll anyway.
-You may also notice that I&amp;rsquo;ve imported a lot of old content from a wordpress blog that I used to have before this one. I&amp;rsquo;ve took a bit of time to fix some old links to code examples and such that were broken.</description>
     </item>
     
   </channel>
