@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Doom Fire on the RS90"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="Doom Fire on the RS90 &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/2019-06-08-doom-fire-on-rs90/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-06-08T00:00:00Z" />
+
+    
+    <meta property="article:tag" content="RS90" />
+    
+    <meta property="article:tag" content="Doom" />
+    
+    <meta property="article:tag" content="Fire" />
+    
+    <meta property="article:tag" content="CMake" />
+    
+    
+
+    <title>Doom Fire on the RS90 &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="The RS90 or Retromini is a little Gameboy-esque clone that&amp;rsquo;s been out for a little while, it contains an older Ingenic JZ24725B processor with 32Mb RAM. I" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/2019-06-08-doom-fire-on-rs90/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": Doom Fire on the RS90,
+    "name": Doom Fire on the RS90,
+    "wordCount": 307,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/2019-06-08-doom-fire-on-rs90/,
+    "datePublished": 2019-06-08T00:00Z,
+    "dateModified": 2019-06-08T00:00Z,
+    
+    "keywords": RS90, Doom, Fire, CMake,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/2019-06-08-doom-fire-on-rs90/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Doom Fire on the RS90</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2019-06-08T00:00:00Z">
+            Jun 8, 2019
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/rs90/">#RS90</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/doom/">#Doom</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/fire/">#Fire</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/cmake/">#CMake</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>The RS90 or Retromini is a little Gameboy-esque clone that&rsquo;s been out for a little while, it contains an older Ingenic JZ24725B processor with 32Mb RAM. It&rsquo;s fairly cheap, I purchased mine from <a href="https://retrosix.co.uk/">https://retrosix.co.uk/</a> for £24.99.
+Out of the box it can play Gameboy, Gameboy Color and Gameboy Advance games with it running an OS that&rsquo;s pretty similar to the old Dingoo A320.</p>
+
+<p>Recently pcercuei alongside mth and zear have done some fantastic work and got OpenDingux running on the device. This opens it up to better emulators, games and apps all of which can be found on the dingoonity sub-forum <a href="https://boards.dingoonity.org/retrominirs-90/">https://boards.dingoonity.org/retrominirs-90/</a>.</p>
+
+<p>The toolchain was also made available, and as with all new devices I wanted to get a little hello world project working on it. Note that I won&rsquo;t explain how I set up the toolchain or cmake that I&rsquo;m using to build the project here, I&rsquo;ll save that for another post.</p>
+
+<h3 id="doom-fire">DOOM Fire</h3>
+
+<p>Now the question came to what should I make that&rsquo;s just enough to test things out but also something that would just take a few hours to code. The answer is the DOOM Fire effect!</p>
+
+<p>The DOOM fire effect is a simulation of fire rising up the screen that was used in the Final DOOM port of DOOM for the Playstation 1. A great writeup on this effect can be found at Fabien Sanglard&rsquo;s website <a href="http://fabiensanglard.net/doom_fire_psx/">http://fabiensanglard.net/doom_fire_psx/</a>.</p>
+
+<p>So I decided to port this over to the RS90, all the code is available <a href="https://github.com/davidatroberts/DOOMFireRS90">here</a>. Note digging through the code it might seem a bit more over-engineered than it needs to be, I used it as a little testbed for some state machine patterns I want to start using for my next few projects with SDL.</p>
+
+<p>Of course I can&rsquo;t leave without a little video of it:</p>
+
+<video width="480" height="360" controls>
+    <source src="https://davidatroberts.github.io/images/DOOM_Fire_RS90.mp4">
+    Unfortunately your browser does not support HTML5 video
+</video>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">David Roberts</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Doom%20Fire%20on%20the%20RS90&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-06-08-doom-fire-on-rs90%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-06-08-doom-fire-on-rs90%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-06-08-doom-fire-on-rs90%2f&amp;description=Doom%20Fire%20on%20the%20RS90"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2019-06-08-doom-fire-on-rs90%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/2019-06-08-doom-fire-on-rs90\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/2019-06-08-doom-fire-on-rs90\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/2019-05-08-cleaning-chumby/">
+          <section class="post">
+              <h2>Cleaning a Chumby with Peroxide</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
