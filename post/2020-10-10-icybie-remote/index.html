@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="A Web Based Remote for the i-Cybie"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@biomood"/>
+
+
+
+  	<meta property="og:title" content="A Web Based Remote for the i-Cybie &middot; Dave&#39;s Hacks" />
+  	<meta property="og:site_name" content="Dave&#39;s Hacks" />
+  	<meta property="og:url" content="https://davidatroberts.github.io/post/2020-10-10-icybie-remote/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-10-10T00:00:00Z" />
+
+    
+    <meta property="article:tag" content="ICybie" />
+    
+    <meta property="article:tag" content="IR" />
+    
+    <meta property="article:tag" content="ESP8266" />
+    
+    <meta property="article:tag" content="Raspberry Pi" />
+    
+    <meta property="article:tag" content="Angular" />
+    
+    
+
+    <title>A Web Based Remote for the i-Cybie &middot; Dave&#39;s Hacks</title>
+
+    
+    <meta name="description" content="When I was young there was one robot that I always wanted, that was a Sony Aibo, unfortunately the closest I ever got was playing with an ERS-7 at an after scho" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://davidatroberts.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://davidatroberts.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://davidatroberts.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://davidatroberts.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dave&#39;s Hacks" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+
+    <link rel="canonical" href="https://davidatroberts.github.io/post/2020-10-10-icybie-remote/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://davidatroberts.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": A Web Based Remote for the i-Cybie,
+    "name": A Web Based Remote for the i-Cybie,
+    "wordCount": 1061,
+    "timeRequired": "PT5M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://davidatroberts.github.io/post/2020-10-10-icybie-remote/,
+    "datePublished": 2020-10-10T00:00Z,
+    "dateModified": 2020-10-10T00:00Z,
+    
+    "keywords": ICybie, IR, ESP8266, Raspberry Pi, Angular,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://davidatroberts.github.io/post/2020-10-10-icybie-remote/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://davidatroberts.github.io/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://davidatroberts.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">A Web Based Remote for the i-Cybie</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-10-10T00:00:00Z">
+            Oct 10, 2020
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/icybie/">#ICybie</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/ir/">#IR</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/esp8266/">#ESP8266</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/raspberry-pi/">#Raspberry Pi</a></span>
+         
+          <span class="post-tag small"><a href="https://davidatroberts.github.io//tags/angular/">#Angular</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>When I was young there was one robot that I always wanted, that was a Sony Aibo, unfortunately the closest I ever got was playing with an ERS-7 at an after school club. I still don&rsquo;t have a Sony Aibo and even though I keep looking at the ERS-1000 I would have to do some amazing mental gymnastics to be able to justify getting one.</p>
+
+<p>Soon after the Aibo was released Silverlit developed the i-Cybie, a cheaper and less sophisticated robot dog. I also never got one of these at the time either. However, thanks to having a bit of spare time due to Covid and being a bit bored I browsed ebay and found one boxed in great condition, and more importantly the battery was still holding its charge. When the i-Cybies were first released there was a mistake in the manual that told people to charge the battery for much longer than required that inevitably damaged a large amount of the batteries.
+I also acquired a slightly rare walk-up charger for the dog, and the cartridge needed for it. With the walk-up charger when the dog needs charging it will attempt to locate the charger and then plug itself in.</p>
+
+<h3 id="controlling-the-i-cybie">Controlling the i-Cybie</h3>
+
+<p>Although the i-Cybie does have some limited autonomous behaviour, the main way to control it is via the IR Remote Control that comes with the dog. The remote itself is fairly plane, with a set of numbers and a couple of other buttons that with different combinations will make the dog perform tricks and set various modes.</p>
+
+<p>After playing with the dog for a bit and getting bored of reading through the manual each time to remember what each button on the remote did, I decided it was time to bring the i-Cybie into the modern mobile web app world. Using an ESP8266 WeMos D1 Mini I made an IR blaster that runs some web services that copy most of the functions of the original remote, then as an excuse to learn Angular I built a small web app to make it easier and friendlier to control the i-Cybie.</p>
+
+<h3 id="wemos-d1-mini-ir-blaster">WeMos D1 Mini IR Blaster</h3>
+
+<p>Although the code will work on any ESP8266 device I decided to get a WeMos D1 Mini because it has a number of accessories on stackable boards. For this project I got a protoboard which I&rsquo;ve got the IR remote and receiver soldered onto and then on top of this is a tiny little OLED screen which I use to display the IP address of the ESP8266 and also to display what the last command was sent to the i-cybie. On ebay I also found these neat little stackable layers that the whole thing can sit in that gives it a bit more of a professional finish.</p>
+
+<p>In order to record and then send out the IR commands from the ESP8266 I used the
+<a href="https://github.com/crankyoldgit/IRremoteESP8266">IRremoteESP8266</a> library. I used the IRrecvDumpV2 example sketch that comes with the library to record the codes from the remote, it dumps IR codes to the serial which I then just hard coded into an array in the final program.</p>
+
+<p>To control and display some text on the tiny display I&rsquo;ve used the <a href="https://github.com/olikraus/u8g2">u8g2</a> library, it has a huge range of fonts/sizes and supports a majority of the displays you can get for the ESP8266.</p>
+
+<p>The only real issue I have with the device is that range of the IR LED I chose is rather short, so next time I may put multiple LEDs into the blaster, or actually pick a better IR LED, not just one that happened to be in my spare parts box.</p>
+
+
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+	  
+    
+<link rel="stylesheet" href="https://davidatroberts.github.io/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('/images/icybie-remote/wemos_top.jpg');">
+      <img itemprop="thumbnail" src="https://davidatroberts.github.io/images/icybie-remote/wemos_top.jpg" alt="IR Blaster Top"/>
+    </div>
+    <a href="https://davidatroberts.github.io/images/icybie-remote/wemos_top.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>IR Blaster Top</p>
+      </figcaption>
+  </figure>
+</div>
+
+    
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('/images/icybie-remote/wemos_ir.jpg');">
+      <img itemprop="thumbnail" src="https://davidatroberts.github.io/images/icybie-remote/wemos_ir.jpg" alt="IR Blaster IR"/>
+    </div>
+    <a href="https://davidatroberts.github.io/images/icybie-remote/wemos_ir.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>IR Blaster IR</p>
+      </figcaption>
+  </figure>
+</div>
+
+    
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('/images/icybie-remote/wemos_side.jpg');">
+      <img itemprop="thumbnail" src="https://davidatroberts.github.io/images/icybie-remote/wemos_side.jpg" alt="IR Blaster Side"/>
+    </div>
+    <a href="https://davidatroberts.github.io/images/icybie-remote/wemos_side.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>IR Blaster Side</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+</div>
+
+
+<h3 id="angular-front-end">Angular Front End</h3>
+
+<p>Although I used to do some web development when I was a developer at Sky straight after undergrad, it&rsquo;s been quite a while since I&rsquo;ve dipped my toes in the new Javascript front end of the week. This was my first real project using Angular and I&rsquo;ve got to say it made it really easy to develop a fairly modern looking application.</p>
+
+<p>The application itself is running on a Raspberry Pi Zero (another find from the spare parts draw). For a small app like this it&rsquo;s plenty powerful enough.</p>
+
+<p>The first time you load the web app it asks for the IP address of the IR Blaster device, once this is entered the first time it is stored in local storage in the browser so it won&rsquo;t ask you the next time you load the site. There&rsquo;s also an option to set if you have the walk-up charger for i-Cybie, if set the app will display some more commands only applicable with the charger.</p>
+
+<p>The <strong>Actions</strong> tab shows the basic actions that the dog can do, including taking a bow, sitting and wagging its&rsquo; tail. Pressing the remote icon on the right will send the request to the web services running on the ESP8266 that will in turn send the correct the IR code.</p>
+
+<p>The <strong>Tricks</strong> tab is a little different in that it contains only two commands, <em>Enter Trick Mode</em> and <em>Exit Trick Mode</em>. When put in Trick Mode the i-Cybie will stop and listen for a particular sequence of claps that will make it do a certain trick. If I wanted to spend more time on this I could&rsquo;ve made the web app play the clap sequence itself, however instead I added the <strong>Guide</strong> section to this page that displays a picture of the dog performing the trick and the sequence of claps needed for it. For the images I found a pdf of the manual, cropped out the images of the dog performing the trick and then just ran them through Inkscape to vectorise to make them look a little bette.</p>
+
+<p>The <strong>Advanced</strong> tab contains a couple of commands that puts the dog into demo modes as well as options to enable/disable the microphone and audio of the dog.</p>
+
+
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+	  
+    
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('/images/icybie-remote/Screenshot_20201016-123502.png');">
+      <img itemprop="thumbnail" src="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-123502.png" alt="Web Service Settings"/>
+    </div>
+    <a href="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-123502.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Web Service Settings</p>
+      </figcaption>
+  </figure>
+</div>
+
+    
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('/images/icybie-remote/Screenshot_20201016-123518.png');">
+      <img itemprop="thumbnail" src="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-123518.png" alt="Actions"/>
+    </div>
+    <a href="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-123518.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Actions</p>
+      </figcaption>
+  </figure>
+</div>
+
+    
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('/images/icybie-remote/Screenshot_20201016-123543.png');">
+      <img itemprop="thumbnail" src="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-123543.png" alt="Tricks"/>
+    </div>
+    <a href="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-123543.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Tricks</p>
+      </figcaption>
+  </figure>
+</div>
+
+    
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('/images/icybie-remote/Screenshot_20201016-132152.png');">
+      <img itemprop="thumbnail" src="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-132152.png" alt="Advanced"/>
+    </div>
+    <a href="https://davidatroberts.github.io/images/icybie-remote/Screenshot_20201016-132152.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Advanced</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+</div>
+
+
+<h3 id="code">Code</h3>
+
+<p>All the code is available with my standard do what you want and I accept no responsibility if this damages your i-Cybie license</p>
+
+<p>The code is in two repositories, the Angular frontend is here: <a href="https://github.com/davidatroberts/i-cybie-web-remote">https://github.com/davidatroberts/i-cybie-web-remote</a></p>
+
+<p>The ESP8266 code is available here, you&rsquo;ll just need to set the ssid and pwd string: <a href="https://github.com/davidatroberts/i-cybie-esp8266-webservices">https://github.com/davidatroberts/i-cybie-esp8266-webservices</a></p>
+
+<p>If you have any questions feel free to ask!</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://davidatroberts.github.io/">David Roberts</a></h4>
+  
+  <p>Read <a href="https://davidatroberts.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Newcastle upon Tyne, UK</span>
+    <span class="author-link icon-link"><a href="https://davidatroberts.github.io/">https://davidatroberts.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=A%20Web%20Based%20Remote%20for%20the%20i-Cybie&nbsp;-&nbsp;Dave%27s%20Hacks&amp;url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2020-10-10-icybie-remote%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2020-10-10-icybie-remote%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2020-10-10-icybie-remote%2f&amp;description=A%20Web%20Based%20Remote%20for%20the%20i-Cybie"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fdavidatroberts.github.io%2fpost%2f2020-10-10-icybie-remote%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/davidatroberts.github.io\/post\/2020-10-10-icybie-remote\/";  
+this.page.identifier = "https:\/\/davidatroberts.github.io\/post\/2020-10-10-icybie-remote\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://daveshacks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://davidatroberts.github.io/post/2019-06-08-doom-fire-on-rs90/">
+          <section class="post">
+              <h2>Doom Fire on the RS90</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Dave&#39;s Hacks</a> &copy; Copyright 2019 David Roberts</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://davidatroberts.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

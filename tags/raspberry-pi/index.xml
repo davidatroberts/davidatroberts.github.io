@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry Pi on Dave&#39;s Hacks</title>
+    <link>https://davidatroberts.github.io/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on Dave&#39;s Hacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2019 David Roberts</copyright>
+    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidatroberts.github.io/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Web Based Remote for the i-Cybie</title>
+      <link>https://davidatroberts.github.io/post/2020-10-10-icybie-remote/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidatroberts.github.io/post/2020-10-10-icybie-remote/</guid>
+      <description>When I was young there was one robot that I always wanted, that was a Sony Aibo, unfortunately the closest I ever got was playing with an ERS-7 at an after school club. I still don&amp;rsquo;t have a Sony Aibo and even though I keep looking at the ERS-1000 I would have to do some amazing mental gymnastics to be able to justify getting one.
+Soon after the Aibo was released Silverlit developed the i-Cybie, a cheaper and less sophisticated robot dog.</description>
+    </item>
+    
+  </channel>
+</rss>
